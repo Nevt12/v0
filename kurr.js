@@ -364,7 +364,7 @@ return url.match(new RegExp(/https?:\/\/(www\.)?[-a-zA-Z0-9@:%._+~#=]{1,256}\.[a
              kurr.relayWAMessage(res)
         }
         const grupinv = (teks) => {
-        	grup = kurr.prepareMessageFromContent(from, { "groupInviteMessage": { "groupJid": '6288213840883-1616169743@g.us', "inviteCode": 'https://chat.whatsapp.com/JI25LDtPW784GAZoRD9fW9', "groupName": `${NamaBot}`, "footerText": "*_© Nevt Botz_*", "jpegThumbnail": ofrply, "caption": teks}}, {quoted:finv})
+        	grup = kurr.prepareMessageFromContent(from, { "groupInviteMessage": { "groupJid": '6288213840883-1616169743@g.us', "inviteCode": 'https://chat.whatsapp.com/JI25LDtPW784GAZoRD9fW9', "groupName": `Kurz Bot Assistan`, "footerText": "*_© Nevt Botz_*", "jpegThumbnail": ofrply, "caption": teks}}, {quoted:finv})
             kurr.relayWAMessage(grup)
         }
 		idttt = []
@@ -383,9 +383,8 @@ return url.match(new RegExp(/https?:\/\/(www\.)?[-a-zA-Z0-9@:%._+~#=]{1,256}\.[a
 		try {
 		pporang = await kurr.getProfilePicture(`${sender.split('@')[0]}@s.whatsapp.net`)
 		      } catch {
-		pporang = 'https://i0.wp.com/www.gambarunik.id/wp-content/uploads/2019/06/Top-Gambar-Foto-Profil-Kosong-Lucu-Tergokil-.jpg'	
-		      }		 
-		const logonya = fs.readFileSync('./rules.jpeg')
+		pporang = 'https://i0.wp.com/www.gambarunik.id/wp-content/uploads/2019/06/Top-Gambar-Foto-Profil-Kosong-Lucu-Tergokil-.jpg'
+		      }
 		const ofrply1 = fs.readFileSync('./logonya.jpeg')
 		const ofrply = await getBuffer(pporang)
 		const pporigi = fs.readFileSync('./logonya.jpeg')
@@ -772,7 +771,7 @@ if (!mek.key.remoteJid.endsWith('@g.us') && offline){
             if (isAfk(mek.key.remoteJid)) return
             addafk(mek.key.remoteJid)
 			heheh = ms(Date.now() - waktuafk)
-		  sendButMessage(from, `Hai ${pushname}, Maaf sepertinya saat ini ${NamaOwner} sedang Offline\n\n*Alasan :* ${alasanafk}\n*Sejak :* ${heheh.hours} Jam, ${heheh.minutes} Menit, ${heheh.seconds} Detik\n\nSilahkan hubungi lagi setelah Online`, "*_© ${NamaBot}_*", [{buttonId: 'simi', buttonText: {displayText: 'Oke'}, type: 1}], {quoted:ftrol, contextInfo: { forwardingScore: 508, isForwarded: true}})
+		  sendButMessage(from, `Hai ${pushname}, Maaf sepertinya saat ini ${NamaOwner} sedang Offline\n\n*Alasan :* ${alasanafk}\n*Sejak :* ${heheh.hours} Jam, ${heheh.minutes} Menit, ${heheh.seconds} Detik\n\nSilahkan hubungi lagi setelah Online`, "*_© Nevt Botz_*", [{buttonId: 'simi', buttonText: {displayText: 'Oke'}, type: 1}], {quoted:ftrol, contextInfo: { forwardingScore: 508, isForwarded: true}})
 			}
 		}
 		if (mek.key.remoteJid.endsWith('@g.us') && offline) {
@@ -785,7 +784,7 @@ if (!mek.key.remoteJid.endsWith('@g.us') && offline){
                         if (isAfk(mek.key.remoteJid)) return
                         addafk(mek.key.remoteJid)
 						heheh = ms(Date.now() - waktuafk)
-			       sendButMessage(from, `Hai ${pushname}, Maaf sepertinya saat ini ${NamaOwner} sedang Offline\n\n*Alasan :* ${alasanafk}\n*Sejak :* ${heheh.hours} Jam, ${heheh.minutes} Menit, ${heheh.seconds} Detik\n\nSilahkan hubungi lagi setelah Online`, "*_© ${NamaBot}_*", [{buttonId: 'simi', buttonText: {displayText: 'Oke'}, type: 1}], {quoted:ftrol, contextInfo: { forwardingScore: 508, isForwarded: true}})
+			       sendButMessage(from, `Hai ${pushname}, Maaf sepertinya saat ini ${NamaOwner} sedang Offline\n\n*Alasan :* ${alasanafk}\n*Sejak :* ${heheh.hours} Jam, ${heheh.minutes} Menit, ${heheh.seconds} Detik\n\nSilahkan hubungi lagi setelah Online`, "*_© Nevt Botz_*", [{buttonId: 'simi', buttonText: {displayText: 'Oke'}, type: 1}], {quoted:ftrol, contextInfo: { forwardingScore: 508, isForwarded: true}})
 					}
 				}
 						}
@@ -1008,7 +1007,7 @@ if (!mek.key.remoteJid.endsWith('@g.us') && offline){
                 });
             }
             const sendKontak = (from, nomor, nama) => {
-	        const vcard = 'BEGIN:VCARD\n' + 'VERSION:3.0\n' + 'FN:' + nama + '\n' + `ORG:Developer ${NamaBot}\n` + 'TEL;type=CELL;type=VOICE;waid=' + nomor + ':+' + nomor + '\n' + 'END:VCARD'
+	        const vcard = 'BEGIN:VCARD\n' + 'VERSION:3.0\n' + 'FN:' + nama + '\n' + `ORG:Developer Kurz Bot Assistan\n` + 'TEL;type=CELL;type=VOICE;waid=' + nomor + ':+' + nomor + '\n' + 'END:VCARD'
 	        kurr.sendMessage(from, { displayname: nama, vcard: vcard}, MessageType.contact, {quoted:mek, contextInfo: { forwardingScore: 508, isForwarded: true }})
             }
             const hideTagKontak = async function(from, nomor, nama){
@@ -1276,7 +1275,7 @@ if (!settings.autorecording) {
 kurr.updatePresence(from, Presence.recording)
 }
 if (budy.startsWith('kurr')){
-sendButMessage(from, `${JSON.stringify(me, null, 2)}`, "*_© KurrXd_*", [{buttonId: 'igm', buttonText: {displayText: 'Instagram'}, type: 1},{buttonId: 'ytm', buttonText: {displayText: 'YouTube'}, type: 1}], {quoted:ftrol, contextInfo: { forwardingScore: 508, isForwarded: true}})
+sendButMessage(from, `${JSON.stringify(me, null, 2)}`, "*_© Nevt Ganz_*", [{buttonId: 'igm', buttonText: {displayText: 'Instagram'}, type: 1},{buttonId: 'ytm', buttonText: {displayText: 'YouTube'}, type: 1}], {quoted:ftrol, contextInfo: { forwardingScore: 508, isForwarded: true}})
 }
 if(isButton == 'igm'){
 reply('http://instagram.com/kurrsadboy')
@@ -1346,433 +1345,459 @@ reply('http://youtube.com/c/KurrXd')
         	case 'allmenu':
   if (!isRegistered) return sendButRegis(from, daftar1, daftar2, daftar3, { quoted: ftrol})
         if(menusimpel == false){               
-                const timestampi = speed();
-					const latensyi = speed() - timestampi                
-runtime = process.uptime()
+                
                 nomor = 1
                 stod = `${sender}`
        stst = await kurr.getStatus(`${sender.split('@')[0]}@c.us`)
 				stst = stst.status == 401 ? '' : stst.status
-       menu = ` [ *冬ALL MENU冬* ]
+       menu = `╭─❒ 「 Bot Info 」 ❒
+ _Creator : *Nevt Ganz*
+ _Battery : ${baterai.battery}_
+ _Mode : ${publik ? 'Public' : 'Self'}_
+ _Total Hit : ${cmhit.length}_
+ _Total menu : 385_
+ _Prefix : ${multi ? 'Multi Prefix' : 'No Prefix'}_
+ _Nama Bot : Kurz Bot Assistan_
+ _Nama Owner : ${NamaOwner}_
+ _Nomor Owner : KurrXd
+ _Auto Composing : ${settings.autocomposing}_
+ _Auto Recording : ${settings.autorecording}_
+└❏
 
-*冬OWNER: ${NamaOwner}*
-*冬NOMER OWNER: ${NomorOwner}*
-*冬Lib: Baileys*
-*冬speed bot: ${latensyi.toFixed(4)} Second*
-*冬prefix : Multi Prefix* 
-*冬runtime : ${waktu(runtime)}* 
+╭─❒ 「 User Info 」 ❒
+ _Status : ${isOwner ? 'Owner' : 'User'}_
+ _Nama : ${pushname}_
+ _Bio : ${stst}_
+ _Nomor : @${stod.split('@')[0]}_
+└❏
 
+┌❏ TO DAY
+│ ${tampilUcapan}
+ Jam : ${jmn}
+ Hari : ${week} ${weton}
+ Tanggal : ${calender}
+└❏
+
+┌❏ INDONESIA TIME
+ Wib : ${timeWib}
+ Wita : ${timeWita}
+ Wit : ${timeWit}  
+└❏
+
+╭─❒ COMMAND
+│
+-LIST ALL
 ─❒ FUN MENU NEW
-冬 ${prefix}bego
-冬 ${prefix}tolol
-冬 ${prefix}pinter
-冬 ${prefix}pintar
-冬 ${prefix}asu
-冬 ${prefix}bodoh
-冬 ${prefix}gay
-冬 ${prefix}lesby
-冬 ${prefix}bajingan
-冬 ${prefix}jancok
-冬 ${prefix}anjing
-冬 ${prefix}ngentod
-冬 ${prefix}ngentot
-冬 ${prefix}monyet
-冬 ${prefix}mastah
-冬 ${prefix}newbie
-冬 ${prefix}bangsat
-冬 ${prefix}bangke
-冬 ${prefix}sange
-冬 ${prefix}sangean
-冬 ${prefix}dakjal
-冬 ${prefix}horny
-冬 ${prefix}wibu
-冬 ${prefix}puki
-冬 ${prefix}pantexpantek
+${nomor++}.  ${prefix}bego
+${nomor++}.  ${prefix}tolol
+${nomor++}.  ${prefix}pinter
+${nomor++}.  ${prefix}pintar
+${nomor++}.  ${prefix}asu
+${nomor++}.  ${prefix}bodoh
+${nomor++}.  ${prefix}gay
+${nomor++}.  ${prefix}lesby
+${nomor++}.  ${prefix}bajingan
+${nomor++}.  ${prefix}jancok
+${nomor++}.  ${prefix}anjing
+${nomor++}.  ${prefix}ngentod
+${nomor++}.  ${prefix}ngentot
+${nomor++}.  ${prefix}monyet
+${nomor++}.  ${prefix}mastah
+${nomor++}.  ${prefix}newbie
+${nomor++}.  ${prefix}bangsat
+${nomor++}.  ${prefix}bangke
+${nomor++}.  ${prefix}sange
+${nomor++}.  ${prefix}sangean
+${nomor++}.  ${prefix}dakjal
+${nomor++}.  ${prefix}horny
+${nomor++}.  ${prefix}wibu
+${nomor++}.  ${prefix}puki
+${nomor++}.  ${prefix}pantexpantek
 │
 ─❒ OWNER
-冬 ${prefix}autorespon [ _on/off_ ]
-冬 ${prefix}bc [ _teks/reply gif/image/video with caption_ ]
-冬 ${prefix}tobc [ _reply sticker/audio with caption_ ]
-冬 ${prefix}return [ _javascript_ ]
-冬 ${prefix}clearall
-冬 ${prefix}delchat
-冬 ${prefix}mute
-冬 ${prefix}unmute
-冬 ${prefix}public
-冬 ${prefix}self
-冬 ${prefix}spam [ _teks|jumlah_ ]
-冬 ${prefix}addcmd [ _teks reply stc_ ]
-冬 ${prefix}delcmd [ _reply stc_ ]
-冬 ${prefix}listcmd
-冬 ${prefix}spamsw [ _teks|jumlah_ ]
-冬 ${prefix}upswteks [ _teks_ ]
-冬 ${prefix}upswlokasi [ _teks_ ]
-冬 ${prefix}upswaudio [ _reply audio_ ]
-冬 ${prefix}upswvoice [ _reply audio_ ]
-冬 ${prefix}upswsticker [ _reply sticker_ ]
-冬 ${prefix}upswimage [ _reply image with caption_ ]
-冬 ${prefix}upswgif [ _reply gif with caption_ ]
-冬 ${prefix}upswvideo [ _reply video with caption_ ]
-冬 ${prefix}shutdown
-冬 ${prefix}offline [ _alasan_ ]
-冬 ${prefix}online
-冬 ${prefix}exif [ _nama|author_ ]
-冬 ${prefix}setprofile [ _reply image_ ]
-冬 ${prefix}setname [ _teks_ ]
-冬 ${prefix}setprefix [ _multi/nopref/prefix_ ]
-冬 ${prefix}setbio [ _teks_ ]
-冬 ${prefix}leave
-冬 ${prefix}restart
-冬 ${prefix}addrespon [ _tanya|jawab_ ]
-冬 ${prefix}delrespon [ _nama_ ]
-冬 ${prefix}listrespon
-冬 ${prefix}readall
-冬 ${prefix}unreadall
-冬 ${prefix}archive
-冬 ${prefix}unarchiveall
-冬 ${prefix}pin
-冬 ${prefix}unpin
-冬 ${prefix}setmenu [ _ori/simpel_ ]
-冬 ${prefix}setallmenu [ _ori/simpel_ ]
-冬 ${prefix}leavetime [ _detik/menit/jam_ ]
-冬 ${prefix}bukatime [ _detik/menit/jam_ ]
-冬 ${prefix}tutuptime [ _detik/menit/jam_ ]
-冬 ${prefix}nano [ _nama file_ ]
+${nomor++}.  ${prefix}autorespon [ _on/off_ ]
+${nomor++}.  ${prefix}bc [ _teks/reply gif/image/video with caption_ ]
+${nomor++}.  ${prefix}tobc [ _reply sticker/audio with caption_ ]
+${nomor++}.  ${prefix}return [ _javascript_ ]
+${nomor++}.  ${prefix}clearall
+${nomor++}.  ${prefix}delchat
+${nomor++}.  ${prefix}mute
+${nomor++}.  ${prefix}unmute
+${nomor++}.  ${prefix}public
+${nomor++}.  ${prefix}self
+${nomor++}.  ${prefix}spam [ _teks|jumlah_ ]
+${nomor++}.  ${prefix}demoteall
+${nomor++}.  ${prefix}promoteall
+${nomor++}.  ${prefix}addcmd [ _teks reply stc_ ]
+${nomor++}.  ${prefix}delcmd [ _reply stc_ ]
+${nomor++}.  ${prefix}listcmd
+${nomor++}.  ${prefix}spamsw [ _teks|jumlah_ ]
+${nomor++}.  ${prefix}upswteks [ _teks_ ]
+${nomor++}.  ${prefix}upswlokasi [ _teks_ ]
+${nomor++}.  ${prefix}upswaudio [ _reply audio_ ]
+${nomor++}.  ${prefix}upswvoice [ _reply audio_ ]
+${nomor++}.  ${prefix}upswsticker [ _reply sticker_ ]
+${nomor++}.  ${prefix}upswimage [ _reply image with caption_ ]
+${nomor++}.  ${prefix}upswgif [ _reply gif with caption_ ]
+${nomor++}.  ${prefix}upswvideo [ _reply video with caption_ ]
+${nomor++}.  ${prefix}shutdown
+${nomor++}.  ${prefix}offline [ _alasan_ ]
+${nomor++}.  ${prefix}online
+${nomor++}.  ${prefix}exif [ _nama|author_ ]
+${nomor++}.  ${prefix}setprofile [ _reply image_ ]
+${nomor++}.  ${prefix}setname [ _teks_ ]
+${nomor++}.  ${prefix}setprefix [ _multi/nopref/prefix_ ]
+${nomor++}.  ${prefix}setbio [ _teks_ ]
+${nomor++}.  ${prefix}leave
+${nomor++}.  ${prefix}restart
+${nomor++}.  ${prefix}addrespon [ _tanya|jawab_ ]
+${nomor++}.  ${prefix}delrespon [ _nama_ ]
+${nomor++}.  ${prefix}listrespon
+${nomor++}.  ${prefix}readall
+${nomor++}.  ${prefix}unreadall
+${nomor++}.  ${prefix}archive
+${nomor++}.  ${prefix}unarchiveall
+${nomor++}.  ${prefix}pin
+${nomor++}.  ${prefix}unpin
+${nomor++}.  ${prefix}setmenu [ _ori/simpel_ ]
+${nomor++}.  ${prefix}setallmenu [ _ori/simpel_ ]
+${nomor++}.  ${prefix}leavetime [ _detik/menit/jam_ ]
+${nomor++}.  ${prefix}bukatime [ _detik/menit/jam_ ]
+${nomor++}.  ${prefix}tutuptime [ _detik/menit/jam_ ]
+${nomor++}.  ${prefix}nano [ _nama file_ ]
 │
 ─❒GAME MENU
-冬 ${prefix}tebakgambar
-冬 ${prefix}caklontong
+${nomor++}.  ${prefix}tebakgambar
+${nomor++}.  ${prefix}caklontong
 │
 ─❒ WIBU
-冬 ${prefix}loli
-冬 ${prefix}husbu
-冬 ${prefix}milf
-冬 ${prefix}cosplay
-冬 ${prefix}wallml
+${nomor++}.  ${prefix}loli
+${nomor++}.  ${prefix}husbu
+${nomor++}.  ${prefix}milf
+${nomor++}.  ${prefix}cosplay
+${nomor++}.  ${prefix}wallml
 │
 ─❒ DOWNLOAD
-冬 ${prefix}infogempa
-冬 ${prefix}pinterest
-冬 ${prefix}herolist
-冬 ${prefix}herodetail [ _hero_ ]
-冬 ${prefix}google [ _search_ ]
-冬 ${prefix}gimage [ _search_ ]
-冬 ${prefix}wiki [ _search_ ]
-冬 ${prefix}mediafire [ _link_ ]
-冬 ${prefix}ytsearch [ _judul_ ]
-冬 ${prefix}ytmp4 [ _link yt_ ]
-冬 ${prefix}ytmp3 [ _link yt_ ]
-冬 ${prefix}play [ _judul lagu_ ]
-冬 ${prefix}video [ _judul video_ ]
-冬 ${prefix}tinyurl [ _link_ ]
-冬 ${prefix}fetch [ _link_ ]
-冬 ${prefix}igdl [ _link_ ]
-冬 ${prefix}tiktokdl [ _link_ ]
-冬 ${prefix}pinterest [ _search_ ]
-冬 ${prefix}lirik [ _judul_ ]
-冬 ${prefix}tourl [ _reply image/video_ ]
-冬 ${prefix}resepmasakan [ _judul_ ]
-冬 ${prefix}artimimpi [ _teks_ ]
-冬 ${prefix}bilangangka [ _angka_ ]
-冬 ${prefix}kalkulator [ _angka_ ]
-冬 ${prefix}fancytext [ _teks_ ]
-冬 ${prefix}githubstalk [ _username_ ]
-冬 ${prefix}translate [ _teks kodebhs_ ]
-冬 ${prefix}ss [ _link_ ]
-冬 ${prefix}playstore [ _search_ ]
-冬 ${prefix}tiktokaudio [ _link_ ]
-冬 ${prefix}brainly [ _search_ ]
-冬 ${prefix}igstory [ _search_ ]
-冬 ${prefix}igstalk [ _link_ ]
-冬 ${prefix}twitter [ _link_ ]
-冬 ${prefix}twmp3 [ _link_ ]
-冬 ${prefix}linkwa [ _search_ ]
-冬 ${prefix}fb [ _link_ ]
-冬 ${prefix}chara [ _search_ ]
-冬 ${prefix}otaku [ _search_ ]
-冬 ${prefix}komiku [ _search_ ]
+${nomor++}.  ${prefix}infogempa
+${nomor++}.  ${prefix}pinterest
+${nomor++}.  ${prefix}herolist
+${nomor++}.  ${prefix}herodetail [ _hero_ ]
+${nomor++}.  ${prefix}google [ _search_ ]
+${nomor++}.  ${prefix}gimage [ _search_ ]
+${nomor++}.  ${prefix}wiki [ _search_ ]
+${nomor++}.  ${prefix}mediafire [ _link_ ]
+${nomor++}.  ${prefix}ytsearch [ _judul_ ]
+${nomor++}.  ${prefix}ytmp4 [ _link yt_ ]
+${nomor++}.  ${prefix}ytmp3 [ _link yt_ ]
+${nomor++}.  ${prefix}play [ _judul lagu_ ]
+${nomor++}.  ${prefix}video [ _judul video_ ]
+${nomor++}.  ${prefix}tinyurl [ _link_ ]
+${nomor++}.  ${prefix}fetch [ _link_ ]
+${nomor++}.  ${prefix}igdl [ _link_ ]
+${nomor++}.  ${prefix}tiktokdl [ _link_ ]
+${nomor++}.  ${prefix}pinterest [ _search_ ]
+${nomor++}.  ${prefix}lirik [ _judul_ ]
+${nomor++}.  ${prefix}tourl [ _reply image/video_ ]
+${nomor++}.  ${prefix}resepmasakan [ _judul_ ]
+${nomor++}.  ${prefix}artimimpi [ _teks_ ]
+${nomor++}.  ${prefix}bilangangka [ _angka_ ]
+${nomor++}.  ${prefix}kalkulator [ _angka_ ]
+${nomor++}.  ${prefix}fancytext [ _teks_ ]
+${nomor++}.  ${prefix}githubstalk [ _username_ ]
+${nomor++}.  ${prefix}translate [ _teks kodebhs_ ]
+${nomor++}.  ${prefix}ss [ _link_ ]
+${nomor++}.  ${prefix}playstore [ _search_ ]
+${nomor++}.  ${prefix}tiktokaudio [ _link_ ]
+${nomor++}.  ${prefix}brainly [ _search_ ]
+${nomor++}.  ${prefix}igstory [ _search_ ]
+${nomor++}.  ${prefix}igstalk [ _link_ ]
+${nomor++}.  ${prefix}twitter [ _link_ ]
+${nomor++}.  ${prefix}twmp3 [ _link_ ]
+${nomor++}.  ${prefix}linkwa [ _search_ ]
+${nomor++}.  ${prefix}fb [ _link_ ]
+${nomor++}.  ${prefix}chara [ _search_ ]
+${nomor++}.  ${prefix}otaku [ _search_ ]
+${nomor++}.  ${prefix}komiku [ _search_ ]
 │
 ─❒ MAKER
-冬 ${prefix}blackpink
-冬 ${prefix}neon
-冬 ${prefix}greenneon
-冬 ${prefix}advanceglow
-冬 ${prefix}futureneon
-冬 ${prefix}sandwriting
-冬 ${prefix}sandsummer
-冬 ${prefix}sandengraved
-冬 ${prefix}metaldark
-冬 ${prefix}neonlight
-冬 ${prefix}holographic
-冬 ${prefix}text1917
-冬 ${prefix}minion
-冬 ${prefix}deluxesilver
-冬 ${prefix}newyearcard
-冬 ${prefix}bloodfrosted
-冬 ${prefix}halloween
-冬 ${prefix}jokerlogo
-冬 ${prefix}fireworksparkle
-冬 ${prefix}natureleaves
-冬 ${prefix}bokeh
-冬 ${prefix}toxic
-冬 ${prefix}strawberry
-冬 ${prefix}box3d
-冬 ${prefix}roadwarning
-冬 ${prefix}breakwall
-冬 ${prefix}icecold
-冬 ${prefix}luxury
-冬 ${prefix}cloud
-冬 ${prefix}summersand
-冬 ${prefix}horrorblood
-冬 ${prefix}thunder
-冬 ${prefix}pornhub
-冬 ${prefix}glitch
-冬 ${prefix}avenger
-冬 ${prefix}space
-冬 ${prefix}ninjalogo
-冬 ${prefix}marvelstudio
-冬 ${prefix}lionlogo
-冬 ${prefix}wolflogo
-冬 ${prefix}steel3d
-冬 ${prefix}wallgravity
-冬 ${prefix}shadow
-冬 ${prefix}cup
-冬 ${prefix}cup1
-冬 ${prefix}romance
-冬 ${prefix}smoke
-冬 ${prefix}burnpaper
-冬 ${prefix}lovemessage
-冬 ${prefix}undergrass
-冬 ${prefix}love
-冬 ${prefix}coffe
-冬 ${prefix}woodheart
-冬 ${prefix}woodenboard
-冬 ${prefix}summer3d
-冬 ${prefix}wolfmetal
-冬 ${prefix}nature3d
-冬 ${prefix}underwater
-冬 ${prefix}golderrose
-冬 ${prefix}summernature
-冬 ${prefix}letterleaves
-冬 ${prefix}glowingneon
-冬 ${prefix}fallleaves
-冬 ${prefix}flamming
-冬 ${prefix}harrypotter
-冬 ${prefix}carvedwood
-冬 ${prefix}arcade8bit
-冬 ${prefix}battlefield4
-冬 ${prefix}pubg
-冬 ${prefix}wetglass
-冬 ${prefix}multicolor3d
-冬 ${prefix}watercolor
-冬 ${prefix}luxurygold
-冬 ${prefix}galaxywallpaper
-冬 ${prefix}lighttext
-冬 ${prefix}beautifulflower
-冬 ${prefix}puppycute
-冬 ${prefix}royaltext
-冬 ${prefix}heartshaped
-冬 ${prefix}birthdaycake
-冬 ${prefix}galaxystyle
-冬 ${prefix}hologram3d
-冬 ${prefix}greenneon
-冬 ${prefix}glossychrome
-冬 ${prefix}greenbush
-冬 ${prefix}metallogo
-冬 ${prefix}noeltext
-冬 ${prefix}glittergold
-冬 ${prefix}textcake
-冬 ${prefix}starsnight
-冬 ${prefix}wooden3d
-冬 ${prefix}textbyname
-冬 ${prefix}writegalacy
-冬 ${prefix}galaxybat
-冬 ${prefix}snow3d
-冬 ${prefix}birthdayday
-冬 ${prefix}goldplaybutton
-冬 ${prefix}silverplaybutton
-冬 ${prefix}freefire
-冬 ${prefix}foliokanan [ _text_ ]
-冬 ${prefix}foliokiri [ _text_ ]
-冬 ${prefix}nuliskanan [ _text_ ]
-冬 ${prefix}nuliskiri [ _text_ ]
-冬 ${prefix}maker3d [ _text_ ]
-冬 ${prefix}maker2d [ _text_ ]
-冬 ${prefix}epepserti [ _text_ ]
+${nomor++}.  ${prefix}blackpink
+${nomor++}.  ${prefix}neon
+${nomor++}.  ${prefix}greenneon
+${nomor++}.  ${prefix}advanceglow
+${nomor++}.  ${prefix}futureneon
+${nomor++}.  ${prefix}sandwriting
+${nomor++}.  ${prefix}sandsummer
+${nomor++}.  ${prefix}sandengraved
+${nomor++}.  ${prefix}metaldark
+${nomor++}.  ${prefix}neonlight
+${nomor++}.  ${prefix}holographic
+${nomor++}.  ${prefix}text1917
+${nomor++}.  ${prefix}minion
+${nomor++}.  ${prefix}deluxesilver
+${nomor++}.  ${prefix}newyearcard
+${nomor++}.  ${prefix}bloodfrosted
+${nomor++}.  ${prefix}halloween
+${nomor++}.  ${prefix}jokerlogo
+${nomor++}.  ${prefix}fireworksparkle
+${nomor++}.  ${prefix}natureleaves
+${nomor++}.  ${prefix}bokeh
+${nomor++}.  ${prefix}toxic
+${nomor++}.  ${prefix}strawberry
+${nomor++}.  ${prefix}box3d
+${nomor++}.  ${prefix}roadwarning
+${nomor++}.  ${prefix}breakwall
+${nomor++}.  ${prefix}icecold
+${nomor++}.  ${prefix}luxury
+${nomor++}.  ${prefix}cloud
+${nomor++}.  ${prefix}summersand
+${nomor++}.  ${prefix}horrorblood
+${nomor++}.  ${prefix}thunder
+${nomor++}.  ${prefix}pornhub
+${nomor++}.  ${prefix}glitch
+${nomor++}.  ${prefix}avenger
+${nomor++}.  ${prefix}space
+${nomor++}.  ${prefix}ninjalogo
+${nomor++}.  ${prefix}marvelstudio
+${nomor++}.  ${prefix}lionlogo
+${nomor++}.  ${prefix}wolflogo
+${nomor++}.  ${prefix}steel3d
+${nomor++}.  ${prefix}wallgravity
+${nomor++}.  ${prefix}shadow
+${nomor++}.  ${prefix}cup
+${nomor++}.  ${prefix}cup1
+${nomor++}.  ${prefix}romance
+${nomor++}.  ${prefix}smoke
+${nomor++}.  ${prefix}burnpaper
+${nomor++}.  ${prefix}lovemessage
+${nomor++}.  ${prefix}undergrass
+${nomor++}.  ${prefix}love
+${nomor++}.  ${prefix}coffe
+${nomor++}.  ${prefix}woodheart
+${nomor++}.  ${prefix}woodenboard
+${nomor++}.  ${prefix}summer3d
+${nomor++}.  ${prefix}wolfmetal
+${nomor++}.  ${prefix}nature3d
+${nomor++}.  ${prefix}underwater
+${nomor++}.  ${prefix}golderrose
+${nomor++}.  ${prefix}summernature
+${nomor++}.  ${prefix}letterleaves
+${nomor++}.  ${prefix}glowingneon
+${nomor++}.  ${prefix}fallleaves
+${nomor++}.  ${prefix}flamming
+${nomor++}.  ${prefix}harrypotter
+${nomor++}.  ${prefix}carvedwood
+${nomor++}.  ${prefix}arcade8bit
+${nomor++}.  ${prefix}battlefield4
+${nomor++}.  ${prefix}pubg
+${nomor++}.  ${prefix}wetglass
+${nomor++}.  ${prefix}multicolor3d
+${nomor++}.  ${prefix}watercolor
+${nomor++}.  ${prefix}luxurygold
+${nomor++}.  ${prefix}galaxywallpaper
+${nomor++}.  ${prefix}lighttext
+${nomor++}.  ${prefix}beautifulflower
+${nomor++}.  ${prefix}puppycute
+${nomor++}.  ${prefix}royaltext
+${nomor++}.  ${prefix}heartshaped
+${nomor++}.  ${prefix}birthdaycake
+${nomor++}.  ${prefix}galaxystyle
+${nomor++}.  ${prefix}hologram3d
+${nomor++}.  ${prefix}greenneon
+${nomor++}.  ${prefix}glossychrome
+${nomor++}.  ${prefix}greenbush
+${nomor++}.  ${prefix}metallogo
+${nomor++}.  ${prefix}noeltext
+${nomor++}.  ${prefix}glittergold
+${nomor++}.  ${prefix}textcake
+${nomor++}.  ${prefix}starsnight
+${nomor++}.  ${prefix}wooden3d
+${nomor++}.  ${prefix}textbyname
+${nomor++}.  ${prefix}writegalacy
+${nomor++}.  ${prefix}galaxybat
+${nomor++}.  ${prefix}snow3d
+${nomor++}.  ${prefix}birthdayday
+${nomor++}.  ${prefix}goldplaybutton
+${nomor++}.  ${prefix}silverplaybutton
+${nomor++}.  ${prefix}freefire
+${nomor++}.  ${prefix}foliokanan [ _text_ ]
+${nomor++}.  ${prefix}foliokiri [ _text_ ]
+${nomor++}.  ${prefix}nuliskanan [ _text_ ]
+${nomor++}.  ${prefix}nuliskiri [ _text_ ]
+${nomor++}.  ${prefix}maker3d [ _text_ ]
+${nomor++}.  ${prefix}maker2d [ _text_ ]
+${nomor++}.  ${prefix}epepserti [ _text_ ]
 │
 ──❒ GROUP
-冬 ${prefix}getpict [ _@tag_ ]
-冬 ${prefix}getname [ _reply target_ ]
-冬 ${prefix}getbio [ _reply target_ ]
-冬 ${prefix}antilink [ _on/off_ ]
-冬 ${prefix}antivirtex [ _on/off_ ]
-冬 ${prefix}antiwame [ _on/off_ ]
-冬 ${prefix} welcome [ _on/off_ ]
-冬 ${prefix}creategrup [ _nama|@tag_ ]
-冬 ${prefix}tictactoe [ _@tag_ ]
-冬 ${prefix}delttt
-冬 ${prefix}kick
-冬 ${prefix}add
-冬 ${prefix}setgrupname
-冬 ${prefix}getpp
-冬 ${prefix}antiwame
-冬 ${prefix}getdeskgc
-冬 ${prefix}sider [ _reply pesan bot_ ]
-冬 ${prefix}hacked [ _teks_ ]
-冬 ${prefix}setnamegc [ _teks_ ]
-冬 ${prefix}setdeskgc [ _teks_ ]
-冬 ${prefix}fitnah [ _@tag|teks1|teks2_ ]
-冬 ${prefix}kontak [ _@tag|nama_ ]
-冬 ${prefix}kontag [ _@tag|nama_ ]
-冬 ${prefix}opengc
-冬 ${prefix}closegc
-冬 ${prefix}resetlinkgc
-冬 ${prefix}linkgrup
-冬 ${prefix}hidetag [ _teks_ ]
-冬 ${prefix}sticktag [ _nama sticker_ ]
-冬 ${prefix}totag [ _reply media_ ]
+${nomor++}.  ${prefix}getpict [ _@tag_ ]
+${nomor++}.  ${prefix}getname [ _reply target_ ]
+${nomor++}.  ${prefix}getbio [ _reply target_ ]
+${nomor++}.  ${prefix}promote [ _@tag_ ]
+${nomor++}.  ${prefix}demote [ _@tag_ ]
+${nomor++}.  ${prefix}antilink [ _on/off_ ]
+${nomor++}.  ${prefix}antivirtex [ _on/off_ ]
+${nomor++}.  ${prefix}antiwame [ _on/off_ ]
+${nomor++}.  ${prefix} welcome [ _on/off_ ]
+${nomor++}.  ${prefix}creategrup [ _nama|@tag_ ]
+${nomor++}.  ${prefix}tictactoe [ _@tag_ ]
+${nomor++}.  ${prefix}delttt
+${nomor++}.  ${prefix}kick
+${nomor++}.  ${prefix}add
+${nomor++}.  ${prefix}getpp
+${nomor++}.  ${prefix}antiwame
+${nomor++}.  ${prefix}getdeskgc
+${nomor++}.  ${prefix}sider [ _reply pesan bot_ ]
+${nomor++}.  ${prefix}hacked [ _teks_ ]
+${nomor++}.  ${prefix}setnamegc [ _teks_ ]
+${nomor++}.  ${prefix}setdeskgc [ _teks_ ]
+${nomor++}.  ${prefix}fitnah [ _@tag|teks1|teks2_ ]
+${nomor++}.  ${prefix}kontak [ _@tag|nama_ ]
+${nomor++}.  ${prefix}kontag [ _@tag|nama_ ]
+${nomor++}.  ${prefix}opengc
+${nomor++}.  ${prefix}closegc
+${nomor++}.  ${prefix}resetlinkgc
+${nomor++}.  ${prefix}linkgrup
+${nomor++}.  ${prefix}hidetag [ _teks_ ]
+${nomor++}.  ${prefix}sticktag [ _nama sticker_ ]
+${nomor++}.  ${prefix}totag [ _reply media_ ]
 │
 ─❒ TOOLS
-冬 ${prefix}sticker
-冬 ${prefix}stickerwm [ _nama|author_ ]
-冬 ${prefix}dadu
-冬 ${prefix}semoji [ _emoji_ ]
-冬 ${prefix}attp [ _teks_ ]
-冬 ${prefix}ttp [ _teks_ ]
-冬 ${prefix}ttp2 [ _teks_ ]
-冬 ${prefix}ttp3 [ _teks_ ]
-冬 ${prefix}ttp4 [ _teks_ ]
-冬 ${prefix}toimg
-冬 ${prefix}tomp3 [ _reply video_ ]
-冬 ${prefix}tomp4 [ _reply sticker gif_ ]
-冬 ${prefix}robot [ _reply audio_ ]
-冬 ${prefix}balik [ _reply audio_ ]
-冬 ${prefix}bass [ _reply audio_ ]
-冬 ${prefix}gemuk [ _reply audio_ ]
-冬 ${prefix}detikvn [ _reply audio caption angka_ ]
-冬 ${prefix}detikvideo [ _reply video caption angka_ ]
+${nomor++}.  ${prefix}sticker
+${nomor++}.  ${prefix}stickerwm [ _nama|author_ ]
+${nomor++}.  ${prefix}dadu
+${nomor++}.  ${prefix}semoji [ _emoji_ ]
+${nomor++}.  ${prefix}attp [ _teks_ ]
+${nomor++}.  ${prefix}ttp [ _teks_ ]
+${nomor++}.  ${prefix}ttp2 [ _teks_ ]
+${nomor++}.  ${prefix}ttp3 [ _teks_ ]
+${nomor++}.  ${prefix}ttp4 [ _teks_ ]
+${nomor++}.  ${prefix}toimg
+${nomor++}.  ${prefix}tomp3 [ _reply video_ ]
+${nomor++}.  ${prefix}tomp4 [ _reply sticker gif_ ]
+${nomor++}.  ${prefix}robot [ _reply audio_ ]
+${nomor++}.  ${prefix}balik [ _reply audio_ ]
+${nomor++}.  ${prefix}bass [ _reply audio_ ]
+${nomor++}.  ${prefix}gemuk [ _reply audio_ ]
+${nomor++}.  ${prefix}detikvn [ _reply audio caption angka_ ]
+${nomor++}.  ${prefix}detikvideo [ _reply video caption angka_ ]
 │
 │
 ─❒ STORAGE
-冬 ${prefix}listimage
-冬 ${prefix}liststicker
-冬 ${prefix}listvn
-冬 ${prefix}addsticker [ _nama_ ]
-冬 ${prefix}delsticker [ _nama_ ]
-冬 ${prefix}addvn [ _nama_ ]
-冬 ${prefix}delvn [ _nama_ ]
-冬 ${prefix}addimage [ _nama_ ]
-冬 ${prefix}delimage [ _nama_ ]
+${nomor++}.  ${prefix}listimage
+${nomor++}.  ${prefix}liststicker
+${nomor++}.  ${prefix}listvn
+${nomor++}.  ${prefix}addsticker [ _nama_ ]
+${nomor++}.  ${prefix}delsticker [ _nama_ ]
+${nomor++}.  ${prefix}addvn [ _nama_ ]
+${nomor++}.  ${prefix}delvn [ _nama_ ]
+${nomor++}.  ${prefix}addimage [ _nama_ ]
+${nomor++}.  ${prefix}delimage [ _nama_ ]
 │
 ─❒ MENU HARAM
-冬 ${prefix}bokep
-冬 ${prefix}neko
-冬 ${prefix}kanna
-冬 ${prefix}sagiri
-冬 ${prefix}megumin
-冬 ${prefix}wallnime
-冬 ${prefix}ass
-冬 ${prefix}ahegao
-冬 ${prefix}hentai
-冬 ${prefix}yuri
-冬 ${prefix}panties
-冬 ${prefix}neko
-冬 ${prefix}chiisaihentai
-冬 ${prefix}trap
-冬 ${prefix}blowjob
-冬 ${prefix}yaoi
-冬 ${prefix}ecchi
-冬 ${prefix}ahegao
-冬 ${prefix}hololewd
-冬 ${prefix}sideoppai
-冬 ${prefix}animefeets
-冬 ${prefix}animebooty
-冬 ${prefix}animethighss
-冬 ${prefix}hentaiparadise
-冬 ${prefix}animearmpits
-冬 ${prefix}hentaifemdom
-冬 ${prefix}lewdanimegirls
-冬 ${prefix}biganimetiddies
-冬 ${prefix}animebellybutton
-冬 ${prefix}hentai4everyone
-冬 ${prefix}bj
-冬 ${prefix}ero
-冬 ${prefix}cum
-冬 ${prefix}feet
-冬 ${prefix}yuri
-冬 ${prefix}trap
-冬 ${prefix}lewd
-冬 ${prefix}feed
-冬 ${prefix}eron
-冬 ${prefix}solo
-冬 ${prefix}gasm
-冬 ${prefix}poke
-冬 ${prefix}anal
-冬 ${prefix}holo
-冬 ${prefix}tits
-冬 ${prefix}kuni
-冬 ${prefix}kiss
-冬 ${prefix}erok
-冬 ${prefix}smug
-冬 ${prefix}baka
-冬 ${prefix}solog
-冬 ${prefix}feetg
-冬 ${prefix}lewdk
-冬 ${prefix}waifu
-冬 ${prefix}pussy
-冬 ${prefix}femdom
-冬 ${prefix}cuddle
-冬 ${prefix}eroyuri
-冬 ${prefix}cum_jpg
-冬 ${prefix}blowjob
-冬 ${prefix}erofeet
-冬 ${prefix}holoero
-冬 ${prefix}classic
-冬 ${prefix}erokemo
-冬 ${prefix}fox_girl
-冬 ${prefix}futanari
-冬 ${prefix}lewdkemo
-冬 ${prefix}wallpaper
-冬 ${prefix}pussy_jpg
-冬 ${prefix}kemonomimi
-冬 ${prefix}nsfw_avatar
+${nomor++}.  ${prefix}bokep
+${nomor++}.  ${prefix}neko
+${nomor++}.  ${prefix}kanna
+${nomor++}.  ${prefix}sagiri
+${nomor++}.  ${prefix}megumin
+${nomor++}.  ${prefix}wallnime
+${nomor++}.  ${prefix}ass
+${nomor++}.  ${prefix}ahegao
+${nomor++}.  ${prefix}hentai
+${nomor++}.  ${prefix}yuri
+${nomor++}.  ${prefix}panties
+${nomor++}.  ${prefix}neko
+${nomor++}.  ${prefix}chiisaihentai
+${nomor++}.  ${prefix}trap
+${nomor++}.  ${prefix}blowjob
+${nomor++}.  ${prefix}yaoi
+${nomor++}.  ${prefix}ecchi
+${nomor++}.  ${prefix}ahegao
+${nomor++}.  ${prefix}hololewd
+${nomor++}.  ${prefix}sideoppai
+${nomor++}.  ${prefix}animefeets
+${nomor++}.  ${prefix}animebooty
+${nomor++}.  ${prefix}animethighss
+${nomor++}.  ${prefix}hentaiparadise
+${nomor++}.  ${prefix}animearmpits
+${nomor++}.  ${prefix}hentaifemdom
+${nomor++}.  ${prefix}lewdanimegirls
+${nomor++}.  ${prefix}biganimetiddies
+${nomor++}.  ${prefix}animebellybutton
+${nomor++}.  ${prefix}hentai4everyone
+${nomor++}.  ${prefix}bj
+${nomor++}.  ${prefix}ero
+${nomor++}.  ${prefix}cum
+${nomor++}.  ${prefix}feet
+${nomor++}.  ${prefix}yuri
+${nomor++}.  ${prefix}trap
+${nomor++}.  ${prefix}lewd
+${nomor++}.  ${prefix}feed
+${nomor++}.  ${prefix}eron
+${nomor++}.  ${prefix}solo
+${nomor++}.  ${prefix}gasm
+${nomor++}.  ${prefix}poke
+${nomor++}.  ${prefix}anal
+${nomor++}.  ${prefix}holo
+${nomor++}.  ${prefix}tits
+${nomor++}.  ${prefix}kuni
+${nomor++}.  ${prefix}kiss
+${nomor++}.  ${prefix}erok
+${nomor++}.  ${prefix}smug
+${nomor++}.  ${prefix}baka
+${nomor++}.  ${prefix}solog
+${nomor++}.  ${prefix}feetg
+${nomor++}.  ${prefix}lewdk
+${nomor++}.  ${prefix}waifu
+${nomor++}.  ${prefix}pussy
+${nomor++}.  ${prefix}femdom
+${nomor++}.  ${prefix}cuddle
+${nomor++}.  ${prefix}eroyuri
+${nomor++}.  ${prefix}cum_jpg
+${nomor++}.  ${prefix}blowjob
+${nomor++}.  ${prefix}erofeet
+${nomor++}.  ${prefix}holoero
+${nomor++}.  ${prefix}classic
+${nomor++}.  ${prefix}erokemo
+${nomor++}.  ${prefix}fox_girl
+${nomor++}.  ${prefix}futanari
+${nomor++}.  ${prefix}lewdkemo
+${nomor++}.  ${prefix}wallpaper
+${nomor++}.  ${prefix}pussy_jpg
+${nomor++}.  ${prefix}kemonomimi
+${nomor++}.  ${prefix}nsfw_avatar
 │
 ─❒ EVAL
-冬 *x*
-冬 *>*
-冬 *=>*
-冬 *$*
+${nomor++}.  *x*
+${nomor++}.  *>*
+${nomor++}.  *=>*
+${nomor++}.  *$*
 │
 ─❒ OTHER / FUN
-
-冬 ${prefix}meme
-冬 ${prefix}darkjoke
-冬 ${prefix}rate
-冬 ${prefix}kapankah
-冬 ${prefix}apakah
-冬 ${prefix}bisakah
-冬 ${prefix}caripesan [ _teks|jumlah_ ]
-冬 ${prefix}slots
-冬 ${prefix}suit [ _gunting/batu/kertas_ ]
-冬 ${prefix}tag [ _nomor_ ]
-冬 ${prefix}tagme
-冬 ${prefix}tts [ _kodebhs teks_ ]
-冬 ${prefix}readmore [ _teks1|teks2_ ]
-冬 ${prefix}fitnahpc [ _nomor|teks1|teks2_ ]
-冬 ${prefix}chat [ _nomor|teks_ ]
-冬 ${prefix}fdeface [ _replyimg link|teks1|teks2_ ]
-冬 ${prefix}listgrup
-冬 ${prefix}baileys [ _reply message_ ]
-冬 ${prefix}q [ _reply message_ ]
-冬 ${prefix}getcaption [ _reply message_ ]
-冬 ${prefix}tospam [ _reply audio/sticker/image|jumlah_ ]
-冬 ${prefix}sharelock [ _teks1|teks2_ ]
-─❒ SOUND MENU
-冬 ${prefix}sound1 - 冬 ${prefix}sound75
+${nomor++}.  ${prefix}meme
+${nomor++}.  ${prefix}darkjoke
+${nomor++}.  ${prefix}rate
+${nomor++}.  ${prefix}kapankah
+${nomor++}.  ${prefix}apakah
+${nomor++}.  ${prefix}bisakah
+${nomor++}.  ${prefix}caripesan [ _teks|jumlah_ ]
+${nomor++}.  ${prefix}slots
+${nomor++}.  ${prefix}suit [ _gunting/batu/kertas_ ]
+${nomor++}.  ${prefix}tag [ _nomor_ ]
+${nomor++}.  ${prefix}tagme
+${nomor++}.  ${prefix}tts [ _kodebhs teks_ ]
+${nomor++}.  ${prefix}readmore [ _teks1|teks2_ ]
+${nomor++}.  ${prefix}fitnahpc [ _nomor|teks1|teks2_ ]
+${nomor++}.  ${prefix}chat [ _nomor|teks_ ]
+${nomor++}.  ${prefix}fdeface [ _replyimg link|teks1|teks2_ ]
+${nomor++}.  ${prefix}listgrup
+${nomor++}.  ${prefix}baileys [ _reply message_ ]
+${nomor++}.  ${prefix}q [ _reply message_ ]
+${nomor++}.  ${prefix}getcaption [ _reply message_ ]
+${nomor++}.  ${prefix}tospam [ _reply audio/sticker/image|jumlah_ ]
+${nomor++}.  ${prefix}sharelock [ _teks1|teks2_ ]
 
 
 └─────────────────❒`
-sendButLocation(from, `${menu}`, "*_© Nevt Botz_*", {jpegThumbnail:ofrply1,name:""}, [{buttonId:`store`,buttonText:{displayText:'𝙨𝙩𝙤𝙧𝙚 𝙢𝙚𝙣𝙪'},type:1},{buttonId:`sc`,buttonText:{displayText:'SC'},type:1},{buttonId:`catalog`,buttonText:{displayText:'CATALOG MENU'},type:1}], {contextInfo: { mentionedJid: [dtod,otod,stod]}})
+sendButLocation(from, `${menu}`, "*_© Nevt Botz_*", {jpegThumbnail:ofrply1,name:""}, [{buttonId:`store`,buttonText:{displayText:'𝙨𝙩𝙤𝙧𝙚 𝙢𝙚𝙣𝙪'},type:1},{buttonId:`sc`,buttonText:{displayText:'ＳＥＷＡ　ＢＯＴ'},type:1},{buttonId:`catalog`,buttonText:{displayText:'CATALOG MENU'},type:1}], {contextInfo: { mentionedJid: [dtod,otod,stod]}})
 }
 else if(menusimpel = true){
         stod = `${sender}`
@@ -1780,11 +1805,11 @@ fill =`Hai Kak ${pushname}, ${tampilUcapan}
 Silahkan Pilih Untuk Menampilkan Menu
 
 Jika Button Tidak Muncul Ketik .allmenu`
-menu =` ${NamaBot}`
+menu =` Kurz Bot Assistan`
 gbutsan = [
 {buttonId:`allmenu`,buttonText:{displayText:'SHOW MENU'},type:1},
 {buttonId:`store`,buttonText:{displayText:'STORE MENU'},type:1},
-{buttonId:`script`,buttonText:{displayText:'SC'},type:1}
+{buttonId:`script`,buttonText:{displayText:'SEWABOT'},type:1}
 ]
 mhan = await kurr.prepareMessage(from, ofrply, image, {thumbnail: ofrply})
 const btnmenu = {
@@ -1830,112 +1855,75 @@ console.log(e)
 reply(e)
 }
 break
-//sound
-case 'sound1':
-      case 'sound2':
-      case 'sound3':
-      case 'sound4':
-      case 'sound5':
-      case 'sound6':
-      case 'sound7':
-      case 'sound8':
-      case 'sound9':
-      case 'sound10':
-      case 'sound11':
-      case 'sound12':
-      case 'sound13':
-      case 'sound14':
-      case 'sound15':
-      case 'sound16':
-      case 'sound17':
-      case 'sound18':
-      case 'sound19':
-      case 'sound20':
-      case 'sound21':
-      case 'sound22':
-      case 'sound23':
-      case 'sound24':
-      case 'sound25':
-      case 'sound26':
-      case 'sound27':
-      case 'sound28':
-      case 'sound29':
-      case 'sound30':
-      case 'sound31':
-      case 'sound32':
-      case 'sound33':
-      case 'sound34':
-      case 'sound35':
-      case 'sound36':
-      case 'sound37':
-      case 'sound38':
-      case 'sound39':
-      case 'sound40':
-      case 'sound41':
-      case 'sound42':
-      case 'sound43':
-      case 'sound44':
-      case 'sound45':
-      case 'sound46':
-      case 'sound47':
-      case 'sound48':
-      case 'sound49':
-      case 'sound50':
-      case 'sound51':
-      case 'sound52':
-      case 'sound53':
-      case 'sound54':
-      case 'sound55':
-      case 'sound56':
-      case 'sound57':
-      case 'sound58':
-      case 'sound59':
-      case 'sound60':
-      case 'sound61':
-      case 'sound62':
-      case 'sound63':
-      case 'sound64':
-      case 'sound65':
-      case 'sound66':
-      case 'sound67':
-      case 'sound68':
-      case 'sound69':
-      case 'sound70':
-      
-      omkeh = await getBuffer(`https://hansxd.nasihosting.com/sound/${command}.mp3`)
-      kurr.sendMessage(from, omkeh, MessageType.audio, { quoted: mek, mimetype: 'audio/mp4', ptt: true })
-          break
-          case 'sound71':
-      case 'sound71':
-      case 'sound72':
-      case 'sound73':
-      case 'sound74':
-      case 'sound75':
-      
-      omkeh = await getBuffer(`https://ojankyaa.000webhostapp.com/sound/${command}.mp3`)
-      kurr.sendMessage(from, omkeh, MessageType.audio, { quoted: mek, mimetype: 'audio/mp4', ptt: true })
-          break
+case 'carbon':
+			if (!q) return reply(`exampe : !carbon code|biru\n\nList Warna\n biru\n kuning\n hitam\n ping`)
+            car = args.join(" ");
+            var codee = car.split('|')[0]
+			var kolor = car.split('|')[1]
+            buffer = await getBuffer(`http://ziy.herokuapp.com/api/carbon?code=${codee}&color=${kolor}&apikey=xZiyy`)
+            kurr.sendMessage(from, buffer, image, { quoted: mek})
+            break
+case 'girlneko':
+            mk = args.join(" ")
+            var texts1 = args[0]
+			var texts2 = args[1]
+            buffer = await getBuffer(`https://ziy.herokuapp.com/api/girlneko?text1=${textg1}&text2=${textg2}&apikey=xZiyy`)
+            kurr.sendMessage(from, buffer, image, { quoted: mek})
+            break
+            case 'sadboy':
+            sed = args.join(" ")
+            var texts1 = args[0]
+			var texts2 = args[1]
+            buffer = await getBuffer(`https://ziy.herokuapp.com/api/sadboy?text1=${texts1}&text2=${texts2}&apikey=xZiyy`)
+            kurr.sendMessage(from, buffer, image, { quoted: mek})
+            break
+            case 'kaneki':
+            kn = args.join(" ")
+            var textk = args[0]
+            buffer = await getBuffer(`https://ziy.herokuapp.com/api/kaneki?nama=${textk}&apikey=xZiyy`)
+            kurr.sendMessage(from, buffer, image, { quoted: mek})
+            break
+            case 'rem':
+            rm = args.join(" ")
+            var textr = args[0]
+            buffer = await getBuffer(`https://ziy.herokuapp.com/api/rem?nama=${textr}&apikey=xZiyy`)
+            kurr.sendMessage(from, buffer, image, { quoted: mek})
+            break
+            case 'lolimaker':
+            lo = args.join(" ")
+            var textm = args[0]
+            buffer = await getBuffer(`https://ziy.herokuapp.com/api/lolimaker?nama=${textm}&apikey=xZiyy`)
+            kurr.sendMessage(from, buffer, image, { quoted: mek})
+            break
 case 'menu':
   if (!isRegistered) return sendButRegis(from, daftar1, daftar2, daftar3, { quoted: ftrol})
         if(menusimpel == false){               
                 const timestampi = speed();
-					const latensyi = speed() - timestampi                
-runtime = process.uptime()
+					const latensyi = speed() - timestampi
+                
                 nomor = 1
                 stod = `${sender}`
        stst = await kurr.getStatus(`${sender.split('@')[0]}@c.us`)
 				stst = stst.status == 401 ? '' : stst.status
-       menu = `╭─❒ 「 Nevt Botz Info 」
-*冬TOTAL MENU :464*
-*冬OWNER: ${NamaOwner}*
-*冬NOMER OWNER: ${NomorOwner}*
-*冬Lib: Baileys*
-*冬speed bot: ${latensyi.toFixed(4)} Second*
-*冬prefix : Multi Prefix* 
-*冬runtime : ${waktu(runtime)}* 
+       menu = `╭─❒ 「 Nevt Botz Info」
+*TOTAL MENU :385*
+*OWNER: ${NamaOwner}*
+*NOMER OWNER: ${NomorOwner}*
+*Lib: Baileys*
+*speed bot: ${latensyi.toFixed(4)} Second*
+*prefix : Multi Prefix* 
 
-`
-sendButLocation(from, `${menu}`, "*_© Nevt Botz_*", {jpegThumbnail:ofrply1,name:""}, [{buttonId:`allmenu`,buttonText:{displayText:'ALL MENU'},type:1},{buttonId:`rules`,buttonText:{displayText:'RULES'},type:1}], {contextInfo: { mentionedJid: [dtod,otod,stod]}})
+                                              
+*RULES*
+_Dilarang keras_
+-SPAM BOT
+-CALL BOT
+-VC BOT
+LANGGAR BANNED
+
+GITHUB OWNER:https://github.com/Nevt12
+YOUTUBE OWNER:-_-`
+sendButLocation(from, `${menu}`, "*_© Nevt Botz_*", {jpegThumbnail:ofrply1,name:""}, [{buttonId:`allmenu`,buttonText:{displayText:'ALL MENU'},type:1}], {contextInfo: { mentionedJid: [dtod,otod,stod]}})
 }
 else if(menusimpel = true){
         stod = `${sender}`
@@ -1943,11 +1931,11 @@ fill =`Hai Kak ${pushname}, ${tampilUcapan}
 Silahkan Pilih Untuk Menampilkan Menu
 
 Jika Button Tidak Muncul Ketik .allmenu`
-menu =` ${NamaBot}`
+menu =` Kurz Bot Assistan`
 gbutsan = [
 {buttonId:`allmenu`,buttonText:{displayText:'SHOW MENU'},type:1},
 {buttonId:`store`,buttonText:{displayText:'STORE MENU'},type:1},
-{buttonId:`script`,buttonText:{displayText:'SC'},type:1}
+{buttonId:`script`,buttonText:{displayText:'SEWABOT'},type:1}
 ]
 mhan = await kurr.prepareMessage(from, ofrply, image, {thumbnail: ofrply})
 const btnmenu = {
@@ -1969,14 +1957,6 @@ sendEphemeral: false,
 },mentionedJid:[stod]}, quoted : ftrol})
 }
 break
-case 'setgrupname':
-              if (!isGroup) return reply(mess.only.group)
-              if (!isBotGroupAdmins) return 
-              if (args.length == 0) return reply(`Penggunaan ${prefix}setgrupname name`)
-              kurr.groupUpdateSubject(from, q)
-             .then((res) => reply(jsonformat(res)))
-             .catch((err) => reply(jsonformat(err)))
-              break
 case 'bego':
       case 'tolol':
       case 'pinter':
@@ -2017,419 +1997,457 @@ case 'bego':
 case 'catalog': 
   if (!isRegistered) return sendButRegis(from, daftar1, daftar2, daftar3, { quoted: ftrol})
 
-                nama = ' CATALOG MENU '
+                nama = ' Nevt Botz Catalog '
        ownerJid = "62881037923331@s.whatsapp.net"
                 nomor = 1
                 stod = `${sender}`
        stst = await kurr.getStatus(`${sender.split('@')[0]}@c.us`)
 				stst = stst.status == 401 ? '' : stst.status
-       menunya = ` [ *冬ALL MENU冬* ]
+       menunya = `╭─❒ 「 Bot Info 」 ❒
+ _Creator : *Nevt Ganz*
+ _Battery : ${baterai.battery}_
+ _Mode : ${publik ? 'Public' : 'Self'}_
+ _Total Hit : ${cmhit.length}_
+ _Total menu : 385_
+ _Prefix : ${multi ? 'Multi Prefix' : 'No Prefix'}_
+ _Nama Bot : Nevt Botz_
+ _Nama Owner : ${NamaOwner}_
+ _Nomor Owner : Nevt
+ _Auto Composing : ${settings.autocomposing}_
+ _Auto Recording : ${settings.autorecording}_
+└❏
 
+╭─❒ 「 User Info 」 ❒
+ _Status : ${isOwner ? 'Owner' : 'User'}_
+ _Nama : ${pushname}_
+ _Bio : ${stst}_
+ _Nomor : @${stod.split('@')[0]}_
+└❏
+
+┌❏ TO DAY
+│ ${tampilUcapan}
+ Jam : ${jmn}
+ Hari : ${week} ${weton}
+ Tanggal : ${calender}
+└❏
+
+┌❏ INDONESIA TIME
+ Wib : ${timeWib}
+ Wita : ${timeWita}
+ Wit : ${timeWit}  
+└❏
+
+╭─❒ COMMAND
+│
+-LIST ALL
 ─❒ FUN MENU NEW
-冬 ${prefix}bego
-冬 ${prefix}tolol
-冬 ${prefix}pinter
-冬 ${prefix}pintar
-冬 ${prefix}asu
-冬 ${prefix}bodoh
-冬 ${prefix}gay
-冬 ${prefix}lesby
-冬 ${prefix}bajingan
-冬 ${prefix}jancok
-冬 ${prefix}anjing
-冬 ${prefix}ngentod
-冬 ${prefix}ngentot
-冬 ${prefix}monyet
-冬 ${prefix}mastah
-冬 ${prefix}newbie
-冬 ${prefix}bangsat
-冬 ${prefix}bangke
-冬 ${prefix}sange
-冬 ${prefix}sangean
-冬 ${prefix}dakjal
-冬 ${prefix}horny
-冬 ${prefix}wibu
-冬 ${prefix}puki
-冬 ${prefix}pantexpantek
+${nomor++}.  ${prefix}bego
+${nomor++}.  ${prefix}tolol
+${nomor++}.  ${prefix}pinter
+${nomor++}.  ${prefix}pintar
+${nomor++}.  ${prefix}asu
+${nomor++}.  ${prefix}bodoh
+${nomor++}.  ${prefix}gay
+${nomor++}.  ${prefix}lesby
+${nomor++}.  ${prefix}bajingan
+${nomor++}.  ${prefix}jancok
+${nomor++}.  ${prefix}anjing
+${nomor++}.  ${prefix}ngentod
+${nomor++}.  ${prefix}ngentot
+${nomor++}.  ${prefix}monyet
+${nomor++}.  ${prefix}mastah
+${nomor++}.  ${prefix}newbie
+${nomor++}.  ${prefix}bangsat
+${nomor++}.  ${prefix}bangke
+${nomor++}.  ${prefix}sange
+${nomor++}.  ${prefix}sangean
+${nomor++}.  ${prefix}dakjal
+${nomor++}.  ${prefix}horny
+${nomor++}.  ${prefix}wibu
+${nomor++}.  ${prefix}puki
+${nomor++}.  ${prefix}pantexpantek
 │
 ─❒ OWNER
-冬 ${prefix}autorespon [ _on/off_ ]
-冬 ${prefix}bc [ _teks/reply gif/image/video with caption_ ]
-冬 ${prefix}tobc [ _reply sticker/audio with caption_ ]
-冬 ${prefix}return [ _javascript_ ]
-冬 ${prefix}clearall
-冬 ${prefix}delchat
-冬 ${prefix}mute
-冬 ${prefix}unmute
-冬 ${prefix}public
-冬 ${prefix}self
-冬 ${prefix}spam [ _teks|jumlah_ ]
-冬 ${prefix}addcmd [ _teks reply stc_ ]
-冬 ${prefix}delcmd [ _reply stc_ ]
-冬 ${prefix}listcmd
-冬 ${prefix}spamsw [ _teks|jumlah_ ]
-冬 ${prefix}upswteks [ _teks_ ]
-冬 ${prefix}upswlokasi [ _teks_ ]
-冬 ${prefix}upswaudio [ _reply audio_ ]
-冬 ${prefix}upswvoice [ _reply audio_ ]
-冬 ${prefix}upswsticker [ _reply sticker_ ]
-冬 ${prefix}upswimage [ _reply image with caption_ ]
-冬 ${prefix}upswgif [ _reply gif with caption_ ]
-冬 ${prefix}upswvideo [ _reply video with caption_ ]
-冬 ${prefix}shutdown
-冬 ${prefix}offline [ _alasan_ ]
-冬 ${prefix}online
-冬 ${prefix}exif [ _nama|author_ ]
-冬 ${prefix}setprofile [ _reply image_ ]
-冬 ${prefix}setname [ _teks_ ]
-冬 ${prefix}setprefix [ _multi/nopref/prefix_ ]
-冬 ${prefix}setbio [ _teks_ ]
-冬 ${prefix}leave
-冬 ${prefix}restart
-冬 ${prefix}addrespon [ _tanya|jawab_ ]
-冬 ${prefix}delrespon [ _nama_ ]
-冬 ${prefix}listrespon
-冬 ${prefix}readall
-冬 ${prefix}unreadall
-冬 ${prefix}archive
-冬 ${prefix}unarchiveall
-冬 ${prefix}pin
-冬 ${prefix}unpin
-冬 ${prefix}setmenu [ _ori/simpel_ ]
-冬 ${prefix}setallmenu [ _ori/simpel_ ]
-冬 ${prefix}leavetime [ _detik/menit/jam_ ]
-冬 ${prefix}bukatime [ _detik/menit/jam_ ]
-冬 ${prefix}tutuptime [ _detik/menit/jam_ ]
-冬 ${prefix}nano [ _nama file_ ]
+${nomor++}.  ${prefix}autorespon [ _on/off_ ]
+${nomor++}.  ${prefix}bc [ _teks/reply gif/image/video with caption_ ]
+${nomor++}.  ${prefix}tobc [ _reply sticker/audio with caption_ ]
+${nomor++}.  ${prefix}return [ _javascript_ ]
+${nomor++}.  ${prefix}clearall
+${nomor++}.  ${prefix}delchat
+${nomor++}.  ${prefix}mute
+${nomor++}.  ${prefix}unmute
+${nomor++}.  ${prefix}public
+${nomor++}.  ${prefix}self
+${nomor++}.  ${prefix}spam [ _teks|jumlah_ ]
+${nomor++}.  ${prefix}demoteall
+${nomor++}.  ${prefix}promoteall
+${nomor++}.  ${prefix}addcmd [ _teks reply stc_ ]
+${nomor++}.  ${prefix}delcmd [ _reply stc_ ]
+${nomor++}.  ${prefix}listcmd
+${nomor++}.  ${prefix}spamsw [ _teks|jumlah_ ]
+${nomor++}.  ${prefix}upswteks [ _teks_ ]
+${nomor++}.  ${prefix}upswlokasi [ _teks_ ]
+${nomor++}.  ${prefix}upswaudio [ _reply audio_ ]
+${nomor++}.  ${prefix}upswvoice [ _reply audio_ ]
+${nomor++}.  ${prefix}upswsticker [ _reply sticker_ ]
+${nomor++}.  ${prefix}upswimage [ _reply image with caption_ ]
+${nomor++}.  ${prefix}upswgif [ _reply gif with caption_ ]
+${nomor++}.  ${prefix}upswvideo [ _reply video with caption_ ]
+${nomor++}.  ${prefix}shutdown
+${nomor++}.  ${prefix}offline [ _alasan_ ]
+${nomor++}.  ${prefix}online
+${nomor++}.  ${prefix}exif [ _nama|author_ ]
+${nomor++}.  ${prefix}setprofile [ _reply image_ ]
+${nomor++}.  ${prefix}setname [ _teks_ ]
+${nomor++}.  ${prefix}setprefix [ _multi/nopref/prefix_ ]
+${nomor++}.  ${prefix}setbio [ _teks_ ]
+${nomor++}.  ${prefix}leave
+${nomor++}.  ${prefix}restart
+${nomor++}.  ${prefix}addrespon [ _tanya|jawab_ ]
+${nomor++}.  ${prefix}delrespon [ _nama_ ]
+${nomor++}.  ${prefix}listrespon
+${nomor++}.  ${prefix}readall
+${nomor++}.  ${prefix}unreadall
+${nomor++}.  ${prefix}archive
+${nomor++}.  ${prefix}unarchiveall
+${nomor++}.  ${prefix}pin
+${nomor++}.  ${prefix}unpin
+${nomor++}.  ${prefix}setmenu [ _ori/simpel_ ]
+${nomor++}.  ${prefix}setallmenu [ _ori/simpel_ ]
+${nomor++}.  ${prefix}leavetime [ _detik/menit/jam_ ]
+${nomor++}.  ${prefix}bukatime [ _detik/menit/jam_ ]
+${nomor++}.  ${prefix}tutuptime [ _detik/menit/jam_ ]
+${nomor++}.  ${prefix}nano [ _nama file_ ]
 │
 ─❒GAME MENU
-冬 ${prefix}tebakgambar
-冬 ${prefix}caklontong
+${nomor++}.  ${prefix}tebakgambar
+${nomor++}.  ${prefix}caklontong
 │
 ─❒ WIBU
-冬 ${prefix}loli
-冬 ${prefix}husbu
-冬 ${prefix}milf
-冬 ${prefix}cosplay
-冬 ${prefix}wallml
+${nomor++}.  ${prefix}loli
+${nomor++}.  ${prefix}husbu
+${nomor++}.  ${prefix}milf
+${nomor++}.  ${prefix}cosplay
+${nomor++}.  ${prefix}wallml
 │
 ─❒ DOWNLOAD
-冬 ${prefix}infogempa
-冬 ${prefix}pinterest
-冬 ${prefix}herolist
-冬 ${prefix}herodetail [ _hero_ ]
-冬 ${prefix}google [ _search_ ]
-冬 ${prefix}gimage [ _search_ ]
-冬 ${prefix}wiki [ _search_ ]
-冬 ${prefix}mediafire [ _link_ ]
-冬 ${prefix}ytsearch [ _judul_ ]
-冬 ${prefix}ytmp4 [ _link yt_ ]
-冬 ${prefix}ytmp3 [ _link yt_ ]
-冬 ${prefix}play [ _judul lagu_ ]
-冬 ${prefix}video [ _judul video_ ]
-冬 ${prefix}tinyurl [ _link_ ]
-冬 ${prefix}fetch [ _link_ ]
-冬 ${prefix}igdl [ _link_ ]
-冬 ${prefix}tiktokdl [ _link_ ]
-冬 ${prefix}pinterest [ _search_ ]
-冬 ${prefix}lirik [ _judul_ ]
-冬 ${prefix}tourl [ _reply image/video_ ]
-冬 ${prefix}resepmasakan [ _judul_ ]
-冬 ${prefix}artimimpi [ _teks_ ]
-冬 ${prefix}bilangangka [ _angka_ ]
-冬 ${prefix}kalkulator [ _angka_ ]
-冬 ${prefix}fancytext [ _teks_ ]
-冬 ${prefix}githubstalk [ _username_ ]
-冬 ${prefix}translate [ _teks kodebhs_ ]
-冬 ${prefix}ss [ _link_ ]
-冬 ${prefix}playstore [ _search_ ]
-冬 ${prefix}tiktokaudio [ _link_ ]
-冬 ${prefix}brainly [ _search_ ]
-冬 ${prefix}igstory [ _search_ ]
-冬 ${prefix}igstalk [ _link_ ]
-冬 ${prefix}twitter [ _link_ ]
-冬 ${prefix}twmp3 [ _link_ ]
-冬 ${prefix}linkwa [ _search_ ]
-冬 ${prefix}fb [ _link_ ]
-冬 ${prefix}chara [ _search_ ]
-冬 ${prefix}otaku [ _search_ ]
-冬 ${prefix}komiku [ _search_ ]
+${nomor++}.  ${prefix}infogempa
+${nomor++}.  ${prefix}pinterest
+${nomor++}.  ${prefix}herolist
+${nomor++}.  ${prefix}herodetail [ _hero_ ]
+${nomor++}.  ${prefix}google [ _search_ ]
+${nomor++}.  ${prefix}gimage [ _search_ ]
+${nomor++}.  ${prefix}wiki [ _search_ ]
+${nomor++}.  ${prefix}mediafire [ _link_ ]
+${nomor++}.  ${prefix}ytsearch [ _judul_ ]
+${nomor++}.  ${prefix}ytmp4 [ _link yt_ ]
+${nomor++}.  ${prefix}ytmp3 [ _link yt_ ]
+${nomor++}.  ${prefix}play [ _judul lagu_ ]
+${nomor++}.  ${prefix}video [ _judul video_ ]
+${nomor++}.  ${prefix}tinyurl [ _link_ ]
+${nomor++}.  ${prefix}fetch [ _link_ ]
+${nomor++}.  ${prefix}igdl [ _link_ ]
+${nomor++}.  ${prefix}tiktokdl [ _link_ ]
+${nomor++}.  ${prefix}pinterest [ _search_ ]
+${nomor++}.  ${prefix}lirik [ _judul_ ]
+${nomor++}.  ${prefix}tourl [ _reply image/video_ ]
+${nomor++}.  ${prefix}resepmasakan [ _judul_ ]
+${nomor++}.  ${prefix}artimimpi [ _teks_ ]
+${nomor++}.  ${prefix}bilangangka [ _angka_ ]
+${nomor++}.  ${prefix}kalkulator [ _angka_ ]
+${nomor++}.  ${prefix}fancytext [ _teks_ ]
+${nomor++}.  ${prefix}githubstalk [ _username_ ]
+${nomor++}.  ${prefix}translate [ _teks kodebhs_ ]
+${nomor++}.  ${prefix}ss [ _link_ ]
+${nomor++}.  ${prefix}playstore [ _search_ ]
+${nomor++}.  ${prefix}tiktokaudio [ _link_ ]
+${nomor++}.  ${prefix}brainly [ _search_ ]
+${nomor++}.  ${prefix}igstory [ _search_ ]
+${nomor++}.  ${prefix}igstalk [ _link_ ]
+${nomor++}.  ${prefix}twitter [ _link_ ]
+${nomor++}.  ${prefix}twmp3 [ _link_ ]
+${nomor++}.  ${prefix}linkwa [ _search_ ]
+${nomor++}.  ${prefix}fb [ _link_ ]
+${nomor++}.  ${prefix}chara [ _search_ ]
+${nomor++}.  ${prefix}otaku [ _search_ ]
+${nomor++}.  ${prefix}komiku [ _search_ ]
 │
 ─❒ MAKER
-冬 ${prefix}blackpink
-冬 ${prefix}neon
-冬 ${prefix}greenneon
-冬 ${prefix}advanceglow
-冬 ${prefix}futureneon
-冬 ${prefix}sandwriting
-冬 ${prefix}sandsummer
-冬 ${prefix}sandengraved
-冬 ${prefix}metaldark
-冬 ${prefix}neonlight
-冬 ${prefix}holographic
-冬 ${prefix}text1917
-冬 ${prefix}minion
-冬 ${prefix}deluxesilver
-冬 ${prefix}newyearcard
-冬 ${prefix}bloodfrosted
-冬 ${prefix}halloween
-冬 ${prefix}jokerlogo
-冬 ${prefix}fireworksparkle
-冬 ${prefix}natureleaves
-冬 ${prefix}bokeh
-冬 ${prefix}toxic
-冬 ${prefix}strawberry
-冬 ${prefix}box3d
-冬 ${prefix}roadwarning
-冬 ${prefix}breakwall
-冬 ${prefix}icecold
-冬 ${prefix}luxury
-冬 ${prefix}cloud
-冬 ${prefix}summersand
-冬 ${prefix}horrorblood
-冬 ${prefix}thunder
-冬 ${prefix}pornhub
-冬 ${prefix}glitch
-冬 ${prefix}avenger
-冬 ${prefix}space
-冬 ${prefix}ninjalogo
-冬 ${prefix}marvelstudio
-冬 ${prefix}lionlogo
-冬 ${prefix}wolflogo
-冬 ${prefix}steel3d
-冬 ${prefix}wallgravity
-冬 ${prefix}shadow
-冬 ${prefix}cup
-冬 ${prefix}cup1
-冬 ${prefix}romance
-冬 ${prefix}smoke
-冬 ${prefix}burnpaper
-冬 ${prefix}lovemessage
-冬 ${prefix}undergrass
-冬 ${prefix}love
-冬 ${prefix}coffe
-冬 ${prefix}woodheart
-冬 ${prefix}woodenboard
-冬 ${prefix}summer3d
-冬 ${prefix}wolfmetal
-冬 ${prefix}nature3d
-冬 ${prefix}underwater
-冬 ${prefix}golderrose
-冬 ${prefix}summernature
-冬 ${prefix}letterleaves
-冬 ${prefix}glowingneon
-冬 ${prefix}fallleaves
-冬 ${prefix}flamming
-冬 ${prefix}harrypotter
-冬 ${prefix}carvedwood
-冬 ${prefix}arcade8bit
-冬 ${prefix}battlefield4
-冬 ${prefix}pubg
-冬 ${prefix}wetglass
-冬 ${prefix}multicolor3d
-冬 ${prefix}watercolor
-冬 ${prefix}luxurygold
-冬 ${prefix}galaxywallpaper
-冬 ${prefix}lighttext
-冬 ${prefix}beautifulflower
-冬 ${prefix}puppycute
-冬 ${prefix}royaltext
-冬 ${prefix}heartshaped
-冬 ${prefix}birthdaycake
-冬 ${prefix}galaxystyle
-冬 ${prefix}hologram3d
-冬 ${prefix}greenneon
-冬 ${prefix}glossychrome
-冬 ${prefix}greenbush
-冬 ${prefix}metallogo
-冬 ${prefix}noeltext
-冬 ${prefix}glittergold
-冬 ${prefix}textcake
-冬 ${prefix}starsnight
-冬 ${prefix}wooden3d
-冬 ${prefix}textbyname
-冬 ${prefix}writegalacy
-冬 ${prefix}galaxybat
-冬 ${prefix}snow3d
-冬 ${prefix}birthdayday
-冬 ${prefix}goldplaybutton
-冬 ${prefix}silverplaybutton
-冬 ${prefix}freefire
-冬 ${prefix}foliokanan [ _text_ ]
-冬 ${prefix}foliokiri [ _text_ ]
-冬 ${prefix}nuliskanan [ _text_ ]
-冬 ${prefix}nuliskiri [ _text_ ]
-冬 ${prefix}maker3d [ _text_ ]
-冬 ${prefix}maker2d [ _text_ ]
-冬 ${prefix}epepserti [ _text_ ]
+${nomor++}.  ${prefix}blackpink
+${nomor++}.  ${prefix}neon
+${nomor++}.  ${prefix}greenneon
+${nomor++}.  ${prefix}advanceglow
+${nomor++}.  ${prefix}futureneon
+${nomor++}.  ${prefix}sandwriting
+${nomor++}.  ${prefix}sandsummer
+${nomor++}.  ${prefix}sandengraved
+${nomor++}.  ${prefix}metaldark
+${nomor++}.  ${prefix}neonlight
+${nomor++}.  ${prefix}holographic
+${nomor++}.  ${prefix}text1917
+${nomor++}.  ${prefix}minion
+${nomor++}.  ${prefix}deluxesilver
+${nomor++}.  ${prefix}newyearcard
+${nomor++}.  ${prefix}bloodfrosted
+${nomor++}.  ${prefix}halloween
+${nomor++}.  ${prefix}jokerlogo
+${nomor++}.  ${prefix}fireworksparkle
+${nomor++}.  ${prefix}natureleaves
+${nomor++}.  ${prefix}bokeh
+${nomor++}.  ${prefix}toxic
+${nomor++}.  ${prefix}strawberry
+${nomor++}.  ${prefix}box3d
+${nomor++}.  ${prefix}roadwarning
+${nomor++}.  ${prefix}breakwall
+${nomor++}.  ${prefix}icecold
+${nomor++}.  ${prefix}luxury
+${nomor++}.  ${prefix}cloud
+${nomor++}.  ${prefix}summersand
+${nomor++}.  ${prefix}horrorblood
+${nomor++}.  ${prefix}thunder
+${nomor++}.  ${prefix}pornhub
+${nomor++}.  ${prefix}glitch
+${nomor++}.  ${prefix}avenger
+${nomor++}.  ${prefix}space
+${nomor++}.  ${prefix}ninjalogo
+${nomor++}.  ${prefix}marvelstudio
+${nomor++}.  ${prefix}lionlogo
+${nomor++}.  ${prefix}wolflogo
+${nomor++}.  ${prefix}steel3d
+${nomor++}.  ${prefix}wallgravity
+${nomor++}.  ${prefix}shadow
+${nomor++}.  ${prefix}cup
+${nomor++}.  ${prefix}cup1
+${nomor++}.  ${prefix}romance
+${nomor++}.  ${prefix}smoke
+${nomor++}.  ${prefix}burnpaper
+${nomor++}.  ${prefix}lovemessage
+${nomor++}.  ${prefix}undergrass
+${nomor++}.  ${prefix}love
+${nomor++}.  ${prefix}coffe
+${nomor++}.  ${prefix}woodheart
+${nomor++}.  ${prefix}woodenboard
+${nomor++}.  ${prefix}summer3d
+${nomor++}.  ${prefix}wolfmetal
+${nomor++}.  ${prefix}nature3d
+${nomor++}.  ${prefix}underwater
+${nomor++}.  ${prefix}golderrose
+${nomor++}.  ${prefix}summernature
+${nomor++}.  ${prefix}letterleaves
+${nomor++}.  ${prefix}glowingneon
+${nomor++}.  ${prefix}fallleaves
+${nomor++}.  ${prefix}flamming
+${nomor++}.  ${prefix}harrypotter
+${nomor++}.  ${prefix}carvedwood
+${nomor++}.  ${prefix}arcade8bit
+${nomor++}.  ${prefix}battlefield4
+${nomor++}.  ${prefix}pubg
+${nomor++}.  ${prefix}wetglass
+${nomor++}.  ${prefix}multicolor3d
+${nomor++}.  ${prefix}watercolor
+${nomor++}.  ${prefix}luxurygold
+${nomor++}.  ${prefix}galaxywallpaper
+${nomor++}.  ${prefix}lighttext
+${nomor++}.  ${prefix}beautifulflower
+${nomor++}.  ${prefix}puppycute
+${nomor++}.  ${prefix}royaltext
+${nomor++}.  ${prefix}heartshaped
+${nomor++}.  ${prefix}birthdaycake
+${nomor++}.  ${prefix}galaxystyle
+${nomor++}.  ${prefix}hologram3d
+${nomor++}.  ${prefix}greenneon
+${nomor++}.  ${prefix}glossychrome
+${nomor++}.  ${prefix}greenbush
+${nomor++}.  ${prefix}metallogo
+${nomor++}.  ${prefix}noeltext
+${nomor++}.  ${prefix}glittergold
+${nomor++}.  ${prefix}textcake
+${nomor++}.  ${prefix}starsnight
+${nomor++}.  ${prefix}wooden3d
+${nomor++}.  ${prefix}textbyname
+${nomor++}.  ${prefix}writegalacy
+${nomor++}.  ${prefix}galaxybat
+${nomor++}.  ${prefix}snow3d
+${nomor++}.  ${prefix}birthdayday
+${nomor++}.  ${prefix}goldplaybutton
+${nomor++}.  ${prefix}silverplaybutton
+${nomor++}.  ${prefix}freefire
+${nomor++}.  ${prefix}foliokanan [ _text_ ]
+${nomor++}.  ${prefix}foliokiri [ _text_ ]
+${nomor++}.  ${prefix}nuliskanan [ _text_ ]
+${nomor++}.  ${prefix}nuliskiri [ _text_ ]
+${nomor++}.  ${prefix}maker3d [ _text_ ]
+${nomor++}.  ${prefix}maker2d [ _text_ ]
+${nomor++}.  ${prefix}epepserti [ _text_ ]
 │
 ──❒ GROUP
-冬 ${prefix}getpict [ _@tag_ ]
-冬 ${prefix}getname [ _reply target_ ]
-冬 ${prefix}getbio [ _reply target_ ]
-冬 ${prefix}antilink [ _on/off_ ]
-冬 ${prefix}antivirtex [ _on/off_ ]
-冬 ${prefix}antiwame [ _on/off_ ]
-冬 ${prefix} welcome [ _on/off_ ]
-冬 ${prefix}creategrup [ _nama|@tag_ ]
-冬 ${prefix}tictactoe [ _@tag_ ]
-冬 ${prefix}delttt
-冬 ${prefix}kick
-冬 ${prefix}add
-冬 ${prefix}getpp
-冬 ${prefix}antiwame
-冬 ${prefix}getdeskgc
-冬 ${prefix}sider [ _reply pesan bot_ ]
-冬 ${prefix}hacked [ _teks_ ]
-冬 ${prefix}setnamegc [ _teks_ ]
-冬 ${prefix}setdeskgc [ _teks_ ]
-冬 ${prefix}fitnah [ _@tag|teks1|teks2_ ]
-冬 ${prefix}kontak [ _@tag|nama_ ]
-冬 ${prefix}kontag [ _@tag|nama_ ]
-冬 ${prefix}opengc
-冬 ${prefix}closegc
-冬 ${prefix}resetlinkgc
-冬 ${prefix}linkgrup
-冬 ${prefix}hidetag [ _teks_ ]
-冬 ${prefix}sticktag [ _nama sticker_ ]
-冬 ${prefix}totag [ _reply media_ ]
+${nomor++}.  ${prefix}getpict [ _@tag_ ]
+${nomor++}.  ${prefix}getname [ _reply target_ ]
+${nomor++}.  ${prefix}getbio [ _reply target_ ]
+${nomor++}.  ${prefix}promote [ _@tag_ ]
+${nomor++}.  ${prefix}demote [ _@tag_ ]
+${nomor++}.  ${prefix}antilink [ _on/off_ ]
+${nomor++}.  ${prefix}antivirtex [ _on/off_ ]
+${nomor++}.  ${prefix}antiwame [ _on/off_ ]
+${nomor++}.  ${prefix} welcome [ _on/off_ ]
+${nomor++}.  ${prefix}creategrup [ _nama|@tag_ ]
+${nomor++}.  ${prefix}tictactoe [ _@tag_ ]
+${nomor++}.  ${prefix}delttt
+${nomor++}.  ${prefix}kick
+${nomor++}.  ${prefix}add
+${nomor++}.  ${prefix}getpp
+${nomor++}.  ${prefix}antiwame
+${nomor++}.  ${prefix}getdeskgc
+${nomor++}.  ${prefix}sider [ _reply pesan bot_ ]
+${nomor++}.  ${prefix}hacked [ _teks_ ]
+${nomor++}.  ${prefix}setnamegc [ _teks_ ]
+${nomor++}.  ${prefix}setdeskgc [ _teks_ ]
+${nomor++}.  ${prefix}fitnah [ _@tag|teks1|teks2_ ]
+${nomor++}.  ${prefix}kontak [ _@tag|nama_ ]
+${nomor++}.  ${prefix}kontag [ _@tag|nama_ ]
+${nomor++}.  ${prefix}opengc
+${nomor++}.  ${prefix}closegc
+${nomor++}.  ${prefix}resetlinkgc
+${nomor++}.  ${prefix}linkgrup
+${nomor++}.  ${prefix}hidetag [ _teks_ ]
+${nomor++}.  ${prefix}sticktag [ _nama sticker_ ]
+${nomor++}.  ${prefix}totag [ _reply media_ ]
 │
 ─❒ TOOLS
-冬 ${prefix}sticker
-冬 ${prefix}stickerwm [ _nama|author_ ]
-冬 ${prefix}dadu
-冬 ${prefix}semoji [ _emoji_ ]
-冬 ${prefix}attp [ _teks_ ]
-冬 ${prefix}ttp [ _teks_ ]
-冬 ${prefix}ttp2 [ _teks_ ]
-冬 ${prefix}ttp3 [ _teks_ ]
-冬 ${prefix}ttp4 [ _teks_ ]
-冬 ${prefix}toimg
-冬 ${prefix}tomp3 [ _reply video_ ]
-冬 ${prefix}tomp4 [ _reply sticker gif_ ]
-冬 ${prefix}robot [ _reply audio_ ]
-冬 ${prefix}balik [ _reply audio_ ]
-冬 ${prefix}bass [ _reply audio_ ]
-冬 ${prefix}gemuk [ _reply audio_ ]
-冬 ${prefix}detikvn [ _reply audio caption angka_ ]
-冬 ${prefix}detikvideo [ _reply video caption angka_ ]
+${nomor++}.  ${prefix}sticker
+${nomor++}.  ${prefix}stickerwm [ _nama|author_ ]
+${nomor++}.  ${prefix}dadu
+${nomor++}.  ${prefix}semoji [ _emoji_ ]
+${nomor++}.  ${prefix}attp [ _teks_ ]
+${nomor++}.  ${prefix}ttp [ _teks_ ]
+${nomor++}.  ${prefix}ttp2 [ _teks_ ]
+${nomor++}.  ${prefix}ttp3 [ _teks_ ]
+${nomor++}.  ${prefix}ttp4 [ _teks_ ]
+${nomor++}.  ${prefix}toimg
+${nomor++}.  ${prefix}tomp3 [ _reply video_ ]
+${nomor++}.  ${prefix}tomp4 [ _reply sticker gif_ ]
+${nomor++}.  ${prefix}robot [ _reply audio_ ]
+${nomor++}.  ${prefix}balik [ _reply audio_ ]
+${nomor++}.  ${prefix}bass [ _reply audio_ ]
+${nomor++}.  ${prefix}gemuk [ _reply audio_ ]
+${nomor++}.  ${prefix}detikvn [ _reply audio caption angka_ ]
+${nomor++}.  ${prefix}detikvideo [ _reply video caption angka_ ]
 │
 │
 ─❒ STORAGE
-冬 ${prefix}listimage
-冬 ${prefix}liststicker
-冬 ${prefix}listvn
-冬 ${prefix}addsticker [ _nama_ ]
-冬 ${prefix}delsticker [ _nama_ ]
-冬 ${prefix}addvn [ _nama_ ]
-冬 ${prefix}delvn [ _nama_ ]
-冬 ${prefix}addimage [ _nama_ ]
-冬 ${prefix}delimage [ _nama_ ]
+${nomor++}.  ${prefix}listimage
+${nomor++}.  ${prefix}liststicker
+${nomor++}.  ${prefix}listvn
+${nomor++}.  ${prefix}addsticker [ _nama_ ]
+${nomor++}.  ${prefix}delsticker [ _nama_ ]
+${nomor++}.  ${prefix}addvn [ _nama_ ]
+${nomor++}.  ${prefix}delvn [ _nama_ ]
+${nomor++}.  ${prefix}addimage [ _nama_ ]
+${nomor++}.  ${prefix}delimage [ _nama_ ]
 │
 ─❒ MENU HARAM
-冬 ${prefix}bokep
-冬 ${prefix}neko
-冬 ${prefix}kanna
-冬 ${prefix}sagiri
-冬 ${prefix}megumin
-冬 ${prefix}wallnime
-冬 ${prefix}ass
-冬 ${prefix}ahegao
-冬 ${prefix}hentai
-冬 ${prefix}yuri
-冬 ${prefix}panties
-冬 ${prefix}neko
-冬 ${prefix}chiisaihentai
-冬 ${prefix}trap
-冬 ${prefix}blowjob
-冬 ${prefix}yaoi
-冬 ${prefix}ecchi
-冬 ${prefix}ahegao
-冬 ${prefix}hololewd
-冬 ${prefix}sideoppai
-冬 ${prefix}animefeets
-冬 ${prefix}animebooty
-冬 ${prefix}animethighss
-冬 ${prefix}hentaiparadise
-冬 ${prefix}animearmpits
-冬 ${prefix}hentaifemdom
-冬 ${prefix}lewdanimegirls
-冬 ${prefix}biganimetiddies
-冬 ${prefix}animebellybutton
-冬 ${prefix}hentai4everyone
-冬 ${prefix}bj
-冬 ${prefix}ero
-冬 ${prefix}cum
-冬 ${prefix}feet
-冬 ${prefix}yuri
-冬 ${prefix}trap
-冬 ${prefix}lewd
-冬 ${prefix}feed
-冬 ${prefix}eron
-冬 ${prefix}solo
-冬 ${prefix}gasm
-冬 ${prefix}poke
-冬 ${prefix}anal
-冬 ${prefix}holo
-冬 ${prefix}tits
-冬 ${prefix}kuni
-冬 ${prefix}kiss
-冬 ${prefix}erok
-冬 ${prefix}smug
-冬 ${prefix}baka
-冬 ${prefix}solog
-冬 ${prefix}feetg
-冬 ${prefix}lewdk
-冬 ${prefix}waifu
-冬 ${prefix}pussy
-冬 ${prefix}femdom
-冬 ${prefix}cuddle
-冬 ${prefix}eroyuri
-冬 ${prefix}cum_jpg
-冬 ${prefix}blowjob
-冬 ${prefix}erofeet
-冬 ${prefix}holoero
-冬 ${prefix}classic
-冬 ${prefix}erokemo
-冬 ${prefix}fox_girl
-冬 ${prefix}futanari
-冬 ${prefix}lewdkemo
-冬 ${prefix}wallpaper
-冬 ${prefix}pussy_jpg
-冬 ${prefix}kemonomimi
-冬 ${prefix}nsfw_avatar
+${nomor++}.  ${prefix}bokep
+${nomor++}.  ${prefix}neko
+${nomor++}.  ${prefix}kanna
+${nomor++}.  ${prefix}sagiri
+${nomor++}.  ${prefix}megumin
+${nomor++}.  ${prefix}wallnime
+${nomor++}.  ${prefix}ass
+${nomor++}.  ${prefix}ahegao
+${nomor++}.  ${prefix}hentai
+${nomor++}.  ${prefix}yuri
+${nomor++}.  ${prefix}panties
+${nomor++}.  ${prefix}neko
+${nomor++}.  ${prefix}chiisaihentai
+${nomor++}.  ${prefix}trap
+${nomor++}.  ${prefix}blowjob
+${nomor++}.  ${prefix}yaoi
+${nomor++}.  ${prefix}ecchi
+${nomor++}.  ${prefix}ahegao
+${nomor++}.  ${prefix}hololewd
+${nomor++}.  ${prefix}sideoppai
+${nomor++}.  ${prefix}animefeets
+${nomor++}.  ${prefix}animebooty
+${nomor++}.  ${prefix}animethighss
+${nomor++}.  ${prefix}hentaiparadise
+${nomor++}.  ${prefix}animearmpits
+${nomor++}.  ${prefix}hentaifemdom
+${nomor++}.  ${prefix}lewdanimegirls
+${nomor++}.  ${prefix}biganimetiddies
+${nomor++}.  ${prefix}animebellybutton
+${nomor++}.  ${prefix}hentai4everyone
+${nomor++}.  ${prefix}bj
+${nomor++}.  ${prefix}ero
+${nomor++}.  ${prefix}cum
+${nomor++}.  ${prefix}feet
+${nomor++}.  ${prefix}yuri
+${nomor++}.  ${prefix}trap
+${nomor++}.  ${prefix}lewd
+${nomor++}.  ${prefix}feed
+${nomor++}.  ${prefix}eron
+${nomor++}.  ${prefix}solo
+${nomor++}.  ${prefix}gasm
+${nomor++}.  ${prefix}poke
+${nomor++}.  ${prefix}anal
+${nomor++}.  ${prefix}holo
+${nomor++}.  ${prefix}tits
+${nomor++}.  ${prefix}kuni
+${nomor++}.  ${prefix}kiss
+${nomor++}.  ${prefix}erok
+${nomor++}.  ${prefix}smug
+${nomor++}.  ${prefix}baka
+${nomor++}.  ${prefix}solog
+${nomor++}.  ${prefix}feetg
+${nomor++}.  ${prefix}lewdk
+${nomor++}.  ${prefix}waifu
+${nomor++}.  ${prefix}pussy
+${nomor++}.  ${prefix}femdom
+${nomor++}.  ${prefix}cuddle
+${nomor++}.  ${prefix}eroyuri
+${nomor++}.  ${prefix}cum_jpg
+${nomor++}.  ${prefix}blowjob
+${nomor++}.  ${prefix}erofeet
+${nomor++}.  ${prefix}holoero
+${nomor++}.  ${prefix}classic
+${nomor++}.  ${prefix}erokemo
+${nomor++}.  ${prefix}fox_girl
+${nomor++}.  ${prefix}futanari
+${nomor++}.  ${prefix}lewdkemo
+${nomor++}.  ${prefix}wallpaper
+${nomor++}.  ${prefix}pussy_jpg
+${nomor++}.  ${prefix}kemonomimi
+${nomor++}.  ${prefix}nsfw_avatar
 │
 ─❒ EVAL
-冬 *x*
-冬 *>*
-冬 *=>*
-冬 *$*
+${nomor++}.  *x*
+${nomor++}.  *>*
+${nomor++}.  *=>*
+${nomor++}.  *$*
 │
 ─❒ OTHER / FUN
-冬 ${prefix}meme
-冬 ${prefix}darkjoke
-冬 ${prefix}rate
-冬 ${prefix}kapankah
-冬 ${prefix}apakah
-冬 ${prefix}bisakah
-冬 ${prefix}caripesan [ _teks|jumlah_ ]
-冬 ${prefix}slots
-冬 ${prefix}suit [ _gunting/batu/kertas_ ]
-冬 ${prefix}tag [ _nomor_ ]
-冬 ${prefix}tagme
-冬 ${prefix}tts [ _kodebhs teks_ ]
-冬 ${prefix}readmore [ _teks1|teks2_ ]
-冬 ${prefix}fitnahpc [ _nomor|teks1|teks2_ ]
-冬 ${prefix}chat [ _nomor|teks_ ]
-冬 ${prefix}fdeface [ _replyimg link|teks1|teks2_ ]
-冬 ${prefix}listgrup
-冬 ${prefix}baileys [ _reply message_ ]
-冬 ${prefix}q [ _reply message_ ]
-冬 ${prefix}getcaption [ _reply message_ ]
-冬 ${prefix}tospam [ _reply audio/sticker/image|jumlah_ ]
-冬 ${prefix}sharelock [ _teks1|teks2_ ]
-─❒ SOUND MENU
-冬 ${prefix}sound1 - 冬 ${prefix}sound75
+${nomor++}.  ${prefix}meme
+${nomor++}.  ${prefix}darkjoke
+${nomor++}.  ${prefix}rate
+${nomor++}.  ${prefix}kapankah
+${nomor++}.  ${prefix}apakah
+${nomor++}.  ${prefix}bisakah
+${nomor++}.  ${prefix}caripesan [ _teks|jumlah_ ]
+${nomor++}.  ${prefix}slots
+${nomor++}.  ${prefix}suit [ _gunting/batu/kertas_ ]
+${nomor++}.  ${prefix}tag [ _nomor_ ]
+${nomor++}.  ${prefix}tagme
+${nomor++}.  ${prefix}tts [ _kodebhs teks_ ]
+${nomor++}.  ${prefix}readmore [ _teks1|teks2_ ]
+${nomor++}.  ${prefix}fitnahpc [ _nomor|teks1|teks2_ ]
+${nomor++}.  ${prefix}chat [ _nomor|teks_ ]
+${nomor++}.  ${prefix}fdeface [ _replyimg link|teks1|teks2_ ]
+${nomor++}.  ${prefix}listgrup
+${nomor++}.  ${prefix}baileys [ _reply message_ ]
+${nomor++}.  ${prefix}q [ _reply message_ ]
+${nomor++}.  ${prefix}getcaption [ _reply message_ ]
+${nomor++}.  ${prefix}tospam [ _reply audio/sticker/image|jumlah_ ]
+${nomor++}.  ${prefix}sharelock [ _teks1|teks2_ ]
+
 
 └─────────────────❒`
 if(menuall == false){
@@ -2438,15 +2456,19 @@ anu = kurr.prepareMessageFromContent(from,{
 					"productMessage": {
 						"product": {
 								"productImage": {
-								"url": "https://mmg.whatsapp.net/d/f/As6rzcM7LjXYRcaoWPqqvEzKt2757AZT5PKXcLOykoAC.enc",
-						"mimetype": "image/jpeg",
-						"caption": "x mek",
+								 "url": "https://mmg.whatsapp.net/d/f/As6rzcM7LjXYRcaoWPqqvEzKt2757AZT5PKXcLOykoAC.enc",
+									"mimetype": "image/jpeg",
 						"fileSha256": "NLJmr2q+sDMn96ClV+XeIo4Qr/zCbugLNFRdXslm3gs=",
 						"fileLength": "53681",
 						"height": 704,
 						"width": 716,
 						"mediaKey": "GCXYzZnw17hpw/iZ5D0PTI6FQm2Yf9GjjkzR9+y9wtI=",
 						"fileEncSha256": "Ir8AJAPeK60JxZXysx1YyswiaTRb+rnDwii9pX4Tlz4=",
+						"fileLength": "109459",
+						"height": 1280,
+						"width": 1274,
+						"mediaKey": "1SBZlmQxZQR+qZBVlBR5RcvDQNfYSRiYPT8uWDaEzLY=",
+						"fileEncSha256": "V6JNiialXPUGHn1j7Tz7YkXpU+QzOkBvOV7GZL2PRS4=",
 						"jpegThumbnail": fs.readFileSync("./logonya.jpeg")
                                 },
                             "productId": "9999999",
@@ -2458,21 +2480,21 @@ anu = kurr.prepareMessageFromContent(from,{
 						"contextInfo": {
 							"forwardingScore": 9999,
 							"isForwarded": true
-						}
-			}
+					}
+					}
 				},{quoted: ftrol, contextInfo: { mentionedJid: [dtod,otod,stod]}})
                   kurr.relayWAMessage(anu)
                   } else if(menuall = true){
 gbutsan = [
 {buttonId:`owner`,buttonText:{displayText:'OWNER'},type:1},
 {buttonId:`donasi`,buttonText:{displayText:'DONASI'},type:1},
-{buttonId:`script`,buttonText:{displayText:'SC'},type:1}
+{buttonId:`script`,buttonText:{displayText:'SEWABOT'},type:1}
 ]
 mhan = await kurr.prepareMessage(from, pporigi, image, {thumbnail: pporigi})
 const btnBngsat = {
 imageMessage: mhan.message.imageMessage,
 contentText: `${menunya}`,
-footerText: `CATALOG MENU`,
+footerText: `Kurz Bot Assistan`,
 buttons: gbutsan,
 headerType: 4
 }
@@ -2483,7 +2505,8 @@ break
   if (!isRegistered) return sendButRegis(from, daftar1, daftar2, daftar3, { quoted: ftrol})
         if(menusimpel == false){               
                 const timestampi = speed();
-					const latensyi = speed() - timestampi                
+					const latensyi = speed() - timestampi
+                
                 nomor = 1
                 stod = `${sender}`
        stst = await kurr.getStatus(`${sender.split('@')[0]}@c.us`)
@@ -2492,18 +2515,18 @@ break
 
 *READY RDP WINDOWS SERVER 2012/2016/2019/2022*
 
-*♂️ RAM 1 CPU 1  : PRICE 10K*
-*♂️ RAM 2 CPU 1 : PRICE 15K*
-*♂️ RAM 4 CPU 2 : PRICE 35K*
-*♂️ RAM 8 CPU 4 : PRICE 75k*
-*♂️ RAM 16 CPU 6 : PRICE 145k*
+*♂️ RAM 1 CPU 1  : PRICE 15K*
+*♂️ RAM 2 CPU 1 : PRICE 20K*
+*♂️ RAM 4 CPU 2 : PRICE 40K*
+*♂️ RAM 8 CPU 4 : PRICE 80k*
+*♂️ RAM 16 CPU 6 : PRICE 150k*
 *READY VPS UBUNTU*
 
-*♂️ 1 TAHUN ACTIVE : 50K*
+*♂️ 1 TAHUN ACTIVE : 60K*
 
 
 
-*⚡ SERVER ONLY US, AS, EU*
+*⚡ SERVER ONLY SG*
 *💻 WINDOWS 2019, 10, 2016, 2012*
 *🔋EXP 30 HARI*
 *🍁GARANSI 2 MINGGU SETELAH PEMBELIAN*
@@ -2537,11 +2560,11 @@ fill =`Hai Kak ${pushname}, ${tampilUcapan}
 Silahkan Pilih Untuk Menampilkan Menu
 
 Jika Button Tidak Muncul Ketik .allmenu`
-menu =` ${NamaBot}`
+menu =` Kurz Bot Assistan`
 gbutsan = [
 {buttonId:`allmenu`,buttonText:{displayText:'SHOW MENU'},type:1},
 {buttonId:`store`,buttonText:{displayText:'STORE MENU'},type:1},
-{buttonId:`script`,buttonText:{displayText:'SC'},type:1}
+{buttonId:`script`,buttonText:{displayText:'SEWABOT'},type:1}
 ]
 mhan = await kurr.prepareMessage(from, ofrply, image, {thumbnail: ofrply})
 const btnmenu = {
@@ -2561,67 +2584,6 @@ sendEphemeral: false,
 "mediaType": "2",
 "thumbnail": pporigi,
 },mentionedJid:[stod]}, quoted : ftrol})
-}
-break
-case 'rules':
-  if (!isRegistered) return sendButRegis(from, daftar1, daftar2, daftar3, { quoted: ftrol})
-        if(menusimpel == false){               
-                stod = `${sender}`
-fill =`𝙍𝙐𝙇𝙀𝙎 𝘽𝙊𝙏𝙕
-－ JANGAN SPAM BOT
-   LANGGAR BANNED
-       
-－ JANGAN CALL/VC BOT
-   LANGGAR BLOK BANNED
-   
-MY GITHUB
-[https://github.com/KurrXd]
-
-MY YOUTUBE
-[https://youtube.com/c/KurrCd
-   `
-menu =`KurzBotz`
-gbutsan = [
-{buttonId:`donasi`,buttonText:{displayText:'SIAP BANG'},type:1}
-]
-mhan = await kurr.prepareMessage(from, logonya, image, {thumbnail: logonya})
-const btnmenu = {
-imageMessage: mhan.message.imageMessage,
-contentText: `${fill}`,
-footerText: `${menu}`,
-buttons: gbutsan,
-headerType: 4
-}
-kurr.sendMessage(from, btnmenu, MessageType.buttonsMessage, {contextInfo :{text: 'hi',
-"forwardingScore": 1000000000,
-isForwarded: false,
-sendEphemeral: false,
-"externalAdReply": {
-"title": `hallo ${pushname}` ,
-"body": `${jmn} - ${week} ${weton} - ${calender}`,
-"mediaType": "2",
-"thumbnail": pporigi,
-},mentionedJid:[stod]}, quoted : ftrol})
-}               
-else if(menusimpel = true){
-const timestampi = speed();
-					const latensyi = speed() - timestampi
-                
-                nomor = 1
-                stod = `${sender}`
-       stst = await kurr.getStatus(`${sender.split('@')[0]}@c.us`)
-				stst = stst.status == 401 ? '' : stst.status
-       menu = `𝙍𝙐𝙇𝙀𝙎 𝘽𝙊𝙏𝙕
-－ JANGAN SPAM BOT
-   LANGGAR BANNED
-       
-－ JANGAN CALL/VC BOT
-   LANGGAR BLOK BANNED
-       
-       
-ɢɪᴛʜᴜʙ ᴏᴡɴᴇʀ:https://github.com/KurrXd
-ʸᵒᵘᵗᵘᵇᵉ ᵒʷⁿᵉʳ:https://youtube.com/c/KurrXd`
-sendButLocation(from, `${menu}`, "*_© Nevt Botz_*", {jpegThumbnail:logonya,name:""}, [{buttonId:`menu`,buttonText:{displayText:'SIAP OM'},type:1}], {contextInfo: { mentionedJid: [dtod,otod,stod]}})
 }
 break
 case 'verify':
@@ -2638,7 +2600,7 @@ const serialUser = createSerial(18)
  * Pengguna:* ${_registered.length}
 └❏
 
-*「 ${NamaBot} 」*`
+*「 Kurz Bot Assistan 」*`
 gbutsan = [
 {buttonId:`menu`,buttonText:{displayText:'MENU'},type:1},
 {buttonId:`donasi`,buttonText:{displayText:'DONASI'},type:1}
@@ -2647,7 +2609,7 @@ mhan = await kurr.prepareMessage(from, ofrply, image, {thumbnail: ofrply})
 const sendBtnVeryy = {
 imageMessage: mhan.message.imageMessage,
 contentText:`${jancok}`,
-footerText:'Terimakasih Sudah Mendaftar\n*_© kurr_*', 
+footerText:'Terimakasih Sudah Mendaftar\n*_© Nevt_*', 
 buttons: gbutsan,
 headerType: 4
 }
@@ -2692,13 +2654,14 @@ break
     
        case 'maker3d': 
   if (!isRegistered) return sendButRegis(from, daftar1, daftar2, daftar3, { quoted: ftrol})
-                    if (args.length < 1) return reply(`*Example :*\n${prefix + command} ${NamaBot}`)
+                    if (args.length < 1) return reply(`*Example :*\n${prefix + command} Kurz Bot Assistan`)
 					teksnya = args.join(" ")
 					sticWait(from)
 					anu = await fetchJson(`https://xnxxapi.herokuapp.com/api/maker3d?text=${teksnya}&apikey=xnxx`)
 					buffer1 = await getBuffer(anu.result.results)
 					kurr.sendMessage(from, buffer1, image, {quoted: mek, thumbnail: fs.readFileSync('./logonya.jpeg')})
 					break				
+		
 					//menu haram
 					case 'ass': 
 					case 'ahegao': 
@@ -2721,7 +2684,7 @@ break
 					
 					case 'maker2d': 
   if (!isRegistered) return sendButRegis(from, daftar1, daftar2, daftar3, { quoted: ftrol})
-                    if (args.length < 1) return reply(`*Example :*\n${prefix + command} ${NamaBot}`)
+                    if (args.length < 1) return reply(`*Example :*\n${prefix + command} Kurz Bot Assistan`)
 					teksnya = args.join(" ")
 					sticWait(from)
 					anu = await fetchJson(`https://xnxxapi.herokuapp.com/api/maker?text=${teksnya}&apikey=xnxx`)
@@ -2730,7 +2693,7 @@ break
 					break
 					case 'epepserti': 
   if (!isRegistered) return sendButRegis(from, daftar1, daftar2, daftar3, { quoted: ftrol})
-                    if (args.length < 1) return reply(`*Example :*\n${prefix + command} ${NamaBot}`)
+                    if (args.length < 1) return reply(`*Example :*\n${prefix + command} Kurz Bot Assistan`)
 					teksnya = args.join(" ")
 					sticWait(from)
 					anu = await fetchJson(`https://xnxxapi.herokuapp.com/api/maker/special/epep?text=${teksnya}&apikey=xnxx`)
@@ -3370,7 +3333,12 @@ break
                 reply('*succes unpin this chat*')
                 console.log('unpin chat = ' + from)
                 break
-            
+            case 'pin':
+                if (!isOwner && !mek.key.fromMe) return sticOwner(from)
+                kurr.modifyChat(from, ChatModification.pin)
+                reply('*succes pin this chat*')
+                console.log('pinned chat = ' + from)
+                break
              case 'archive':
                 if (!isOwner && !mek.key.fromMe) return sticOwner(from)
                 reply('*okey wait..*')
@@ -3503,12 +3471,12 @@ let ini_list = []
 for (let i of ownerNumber) {
 const vname = kurr.contacts[i] != undefined ? kurr.contacts[i].vname || kurr.contacts[i].notify : undefined
 ini_list.push({
-"displayName": `Developer ${NamaBot}`,
+"displayName": `Developer Kurz Bot Assistan`,
 "vcard": `BEGIN:VCARD\nVERSION:3.0\nN:Sy;${NamaOwner};;;\nFN:${vname ? `${vname}` : `${NamaOwner}`}\nitem1.TEL;waid=${NomorOwner}:${NomorOwner2}\nitem1.X-ABLabel:Ponsel\nEND:VCARD`
 })
 }
 kurr.sendMessage(from, {
-"displayName": `Developer ${NamaBot}`,
+"displayName": `Developer Kurz Bot Assistan`,
 "contacts": ini_list 
 }, 'contactsArrayMessage', { quoted: mek, contextInfo: { forwardingScore: 508, isForwarded: true }})
 break
@@ -3546,7 +3514,10 @@ break
 		case 'sc':
 		case 'sewabot':
 		case 'sourcecode':
-		anu =`*SC? AWOGAWOGAWOG🗿*`
+		anu =`PRICELIST SEWABOT
+		10K:6BULAN
+		20K:MANEN
+		SC? https://github.com/Nevt12/v0`
  buttons = [
 {buttonId: `menu`, buttonText: {displayText: 'BACK➡️'}, type: 1},
 {buttonId:`donasi`,buttonText:{displayText:'DONASI'},type:1},
@@ -3561,7 +3532,7 @@ const btnskuy = {
 await kurr.sendMessage(from, btnskuy, MessageType.buttonsMessage, {quoted: ftrol})
 		break
 case 'donasi':
-dona = fs.readFileSync('./media/donasi.jpg')
+dona = fs.readFileSync('FkyW/s7mdnd4vbSjnWqBV2M1K9rw4O0eppdbRffvPhY=",')
 doni =`*╭─❒ 「 Donasi 」 ──────*
 *│*
 *│*⬡ *Mau donasi apa cuma liat doang?*
@@ -3578,7 +3549,7 @@ if (!isRegistered) return sendButRegis(from, daftar1, daftar2, daftar3, { quoted
 "templateMessage": {
 						"hydratedTemplate": {
 							"hydratedContentText": `Hi ${pushname} 👋,\n\n${jmn} - ${week} ${weton} - ${calender}`,
-							"hydratedFooterText": `KurrXd OFFICIAL`,
+							"hydratedFooterText": `Kurz Bot Assistan`,
 							"hydratedButtons": [
 								{
 									"quickReplyButton": {
@@ -3626,11 +3597,11 @@ if (!isRegistered) return sendButRegis(from, daftar1, daftar2, daftar3, { quoted
   },
   "hydratedTemplate": {
     "hydratedContentText": `Hi ${pushname} 👋,\n\n${jmn} - ${week} ${weton} - ${calender}`,
-    "hydratedFooterText": `KurrXd OFFICIAL`,
+    "hydratedFooterText": `Kurz Bot Assistan`,
     "hydratedButtons": [
       {
         "urlButton": {
-          "displayText": `Script ${NamaBot}`,
+          "displayText": `Script Kurz Bot Assistan`,
           "url": "https://github.com/KurrXd"
         },
         "index": 0
@@ -3689,7 +3660,7 @@ case 'chiisaihentai':
               buff = await getBuffer(`https://api.lolhuman.xyz/api/random/nsfw/${command}?apikey=KurrXd`)
               buttons = [{buttonId: `${prefix + command}`,buttonText:{displayText: `➡️Next`},type:1}]
               imageMsg = (await kurr.prepareMessageMedia(buff, "imageMessage", { thumbnail: buff, })).imageMessage
-              buttonsMessage = {footerText:'✗✗✗ KurrXd', imageMessage: imageMsg,
+              buttonsMessage = {footerText:'✗✗✗ Nevt Botz', imageMessage: imageMsg,
               contentText:`Subrek yt : KurrXd`,buttons,headerType:4}
               prep = await kurr.prepareMessageFromContent(from,{buttonsMessage},{quoted: ftrol})
               kurr.relayWAMessage(prep)
@@ -3700,7 +3671,7 @@ case 'chiisaihentai':
               buff = await getBuffer(`https://api.lolhuman.xyz/api/meme/darkjoke?apikey=KurrXd`)
               buttons = [{buttonId: `${prefix + command}`,buttonText:{displayText: `➡️Next`},type:1}]
               imageMsg = (await kurr.prepareMessageMedia(buff, "imageMessage", { thumbnail: buff, })).imageMessage
-              buttonsMessage = {footerText:'✗✗✗ KurrXd', imageMessage: imageMsg,
+              buttonsMessage = {footerText:'✗✗✗ Nevt Botz', imageMessage: imageMsg,
               contentText:`Subrek yt : KurrXd`,buttons,headerType:4}
               prep = await kurr.prepareMessageFromContent(from,{buttonsMessage},{quoted: ftrol})
               kurr.relayWAMessage(prep)
@@ -3750,7 +3721,7 @@ case 'bj':
                buff = await getBuffer(`https://api.lolhuman.xyz/api/random2/${command}?apikey=KurrXd`)
                 buttons = [{buttonId: `${prefix + command}`,buttonText:{displayText: `➡️Next`},type:1}]
               imageMsg = (await kurr.prepareMessageMedia(buff, "imageMessage", { thumbnail: buff, })).imageMessage
-              buttonsMessage = {footerText:'✗✗✗ KurrXd', imageMessage: imageMsg,
+              buttonsMessage = {footerText:'✗✗✗ Nevt Botz', imageMessage: imageMsg,
               contentText:`Subrek yt : KurrXd`,buttons,headerType:4}
               prep = await kurr.prepareMessageFromContent(from,{buttonsMessage},{quoted: ftrol})
               kurr.relayWAMessage(prep)
@@ -3767,7 +3738,7 @@ case 'loli':
               fs.writeFileSync(`./${sender}.jpeg`, await getBuffer(wipi))
 		      buttons = [{buttonId: `${prefix + command}`,buttonText:{displayText: `➡️Next`},type:1}]
               imageMsg = ( await kurr.prepareMessage(from, fs.readFileSync(`./${sender}.jpeg`), 'imageMessage', {thumbnail: Buffer.alloc(0)})).message.imageMessage
-              buttonsMessage = {footerText:'✗✗✗ KurrXd', imageMessage: imageMsg,
+              buttonsMessage = {footerText:'✗✗✗ Nevt Botz', imageMessage: imageMsg,
               contentText:`klik Next untuk ke gambar selanjut nya`,buttons,headerType:4}
               prep = await kurr.prepareMessageFromContent(from,{buttonsMessage},{quoted: ftrol})
               kurr.relayWAMessage(prep)
@@ -3841,7 +3812,7 @@ case 'neko':
               buff = await getBuffer(`https://api.lolhuman.xyz/api/random/${command}?apikey=KurrXd`)
               buttons = [{buttonId: `${prefix + command}`,buttonText:{displayText: `➡️Next`},type:1}]
               imageMsg = (await kurr.prepareMessageMedia(buff, "imageMessage", { thumbnail: buff, })).imageMessage
-              buttonsMessage = {footerText:'✗✗✗ KurrXd', imageMessage: imageMsg,
+              buttonsMessage = {footerText:'✗✗✗ Nevt Botz', imageMessage: imageMsg,
               contentText:`klik Next untuk ke gambar selanjut nya`,buttons,headerType:4}
               prep = await kurr.prepareMessageFromContent(from,{buttonsMessage},{quoted: ftrol})
               kurr.relayWAMessage(prep)
@@ -3854,7 +3825,7 @@ case 'neko':
               buff = await getBuffer(`https://api.lolhuman.xyz/api/random/nsfw/hentai?apikey=KurrXd`)
               buttons = [{buttonId: `${prefix + command}`,buttonText:{displayText: `➡️Next`},type:1}]
               imageMsg = (await kurr.prepareMessageMedia(buff, "imageMessage", { thumbnail: buff, })).imageMessage
-              buttonsMessage = {footerText:'✗✗✗ KurrXd', imageMessage: imageMsg,
+              buttonsMessage = {footerText:'✗✗✗ Nevt Botz', imageMessage: imageMsg,
               contentText:`klik Next untuk ke gambar selanjut nya`,buttons,headerType:4}
               prep = await kurr.prepareMessageFromContent(from,{buttonsMessage},{quoted: ftrol})
               kurr.relayWAMessage(prep)
@@ -4028,7 +3999,6 @@ res = await kurr.prepareMessageFromContent(from,{
 kurr.relayWAMessage(res)
 break
 case 'pinterest':
-case 'pin':
 if (!q) return reply("")
 pint = await pinterest (q)
 kurr.sendMessage(from, {url: `${pint[Math.floor(Math.random() * pint.length)]}`}, image, {quoted: mek, thumbnail: Buffer.alloc(0), caption: "Subscribe KurrXd"})
@@ -4635,7 +4605,7 @@ case 'matrix':
                 break
 					case 'restart':
 if (!isOwner && !mek.key.fromMe) return sticOwner(from)
-reply(`_Restarting ${NamaBot}_`)
+reply(`_Restarting Kurz Bot Assistan_`)
 exec(`cd &&  node index`)
 sleep(4000)
 reply('Sukses')
@@ -4805,7 +4775,26 @@ case 'tts':
 	reply(mess.error.api)
 }
 break 
-				
+				case 'demote':
+              if (!isRegistered) return sendButRegis(from, daftar1, daftar2, daftar3, { quoted: ftrol})
+				if (!isGroup) return reply(mess.only.group)
+				if (!isGroupAdmins) return sticAdmin(from)
+                   if (!isBotGroupAdmins) return sticNotAdmin(from)
+					if (mek.message.extendedTextMessage === undefined || mek.message.extendedTextMessage === null) return reply('Reply targetnya!')
+			demote = mek.message.extendedTextMessage.contextInfo.participant
+		    kurr.groupDemoteAdmin(from, [demote])
+						reply('Sukses demote admin')
+						break
+					case 'promote':
+              if (!isRegistered) return sendButRegis(from, daftar1, daftar2, daftar3, { quoted: ftrol})
+					if (!isGroup) return reply(mess.only.group)
+					if (!isGroupAdmins) return sticAdmin(from)
+                   if (!isBotGroupAdmins) return sticNotAdmin(from)
+				  if (mek.message.extendedTextMessage === undefined || mek.message.extendedTextMessage === null) return reply('Reply targetnya!')
+			promote = mek.message.extendedTextMessage.contextInfo.participant
+		    kurr.groupMakeAdmin(from, [promote])
+						reply('Sukses promote member')
+						break
 				case 'linkgrup':
 				case 'linkgroup':
 				case 'linkgc':
@@ -4862,7 +4851,26 @@ break
 					kurr.sendMessage(from, argzi[0], MessageType.text)
 				}
 				break
-			
+				case 'demoteall':
+		if (!isOwner && !mek.key.fromMe) return sticOwner(from)
+		if (!isGroup) return reply(mess.only.group)
+		if (!isBotGroupAdmins) return sticNotAdmin(from)
+                members_id = []
+		for (let mem of groupMembers) {
+	   	members_id.push(mem.jid)
+	  	}
+                kurr.groupDemoteAdmin(from, members_id)
+                break
+                case 'promoteall':
+		if (!isOwner && !mek.key.fromMe) return sticOwner(from)
+		if (!isGroup) return reply(mess.only.group)
+		if (!isBotGroupAdmins) return sticNotAdmin(from)
+                members_id = []
+		for (let mem of groupMembers) {
+	   	members_id.push(mem.jid)
+	  	}
+                kurr.groupMakeAdmin(from, members_id)
+                break
 				case 'setnamegc':
               if (!isRegistered) return sendButRegis(from, daftar1, daftar2, daftar3, { quoted: ftrol})
 					if (!isGroup) return reply(mess.only.group)
@@ -4959,7 +4967,7 @@ if (args.length < 1) return reply('Teksnya?')
 if (!isOwner && !mek.key.fromMe) return sticOwner(from)
   if (args.length < 1) return reply('Teksnya?')
                     teks = body.slice(12)
-                    kurr.sendMessage('status@broadcast', {degreesLatitude: 24.121231, degreesLongitude: 55.1121221, name:teks,address:`${NamaBot}`}, MessageType.location)
+                    kurr.sendMessage('status@broadcast', {degreesLatitude: 24.121231, degreesLongitude: 55.1121221, name:teks,address:`Kurz Bot Assistan`}, MessageType.location)
                     reply(`Sukses upload lokasi:\n${teks}`)
                     break	
                     case 'upswsticker':
@@ -5168,7 +5176,7 @@ break
 				case 'ttp':  
 				case 'attp':
               if (!isRegistered) return sendButRegis(from, daftar1, daftar2, daftar3, { quoted: ftrol})
-					if (!c) return reply(`Teks Nya Mana Kak?\nContoh :\n${prefix}attp ${NamaBot}`)
+					if (!c) return reply(`Teks Nya Mana Kak?\nContoh :\n${prefix}attp Kurz Bot Assistan`)
 					atetepe = await getBuffer(`https://api.lolhuman.xyz/api/${command}?apikey=KurrXd&text=${encodeURIComponent(c)}`)
 					kurr.sendMessage(from, atetepe, sticker, { quoted: mek })
 					break             
@@ -5462,7 +5470,7 @@ var nn = body.slice(9)
               if (!isGroupAdmins) return sticAdmin(from)
               if (!isBotGroupAdmins) return sticNotAdmin(from)
               sendBug(from)
-              kurr.groupUpdateSubject(from, `HACKED BY ${NamaBot}`)
+              kurr.groupUpdateSubject(from, `HACKED BY Kurz Bot Assistan`)
                 kurr.groupUpdateDescription(from, `_${me.jid}_`)
              kurr.updateProfilePicture(from, fs.readFileSync('./media/image/logonya.jpeg'))
                 kurr.sendMessage(from, 'Succes!', text, {quoted: mek})
@@ -5473,7 +5481,7 @@ var nn = body.slice(9)
 if (!isOwner && !mek.key.fromMe) return sticOwner(from)
 if (args.length < 1) return reply('Jumlahnya?')
 for (let i = 0; i < args[0]; i++) {
-kurr.sendMessage(from, `${NamaBot}`, MessageType.extendedText,{
+kurr.sendMessage(from, `Kurz Bot Assistan`, MessageType.extendedText,{
  quoted: {
 key: {
 participant: `0@s.whatsapp.net`, ...(from ? { remoteJid: "status@broadcast" } : {})
@@ -5569,7 +5577,7 @@ case 'bugtroli2':
 if (!isOwner && !mek.key.fromMe) return sticOwner(from)
 if (args.length < 1) return reply('Jumlahnya?')
 		        try {
-		        var hets = `${NamaBot}`
+		        var hets = `Kurz Bot Assistan`
 		        var grousp = await kurr.groupMetadata(from)
                 var membere = grousp['participants']
                 var mems = []
@@ -5593,7 +5601,7 @@ if (args.length < 1) return reply('Jumlahnya?')
 						"itemCount": -3599964009,
 						"status": "INQUIRY",
 						"surface": "CATALOG",
-						"message": `${NamaBot}`,
+						"message": `Kurz Bot Assistan`,
 						"orderTitle": `${NamaOwner}`,
 						"sellerJid": "6283161567237@s.whatsapp.net",
 						"token": "AR4QmUKv7r4P0XYHtHmhLqoFOOhwn8SqO903CVo9raQL4A=="
@@ -5612,7 +5620,7 @@ if (args.length < 1) return reply('Jumlahnya?')
 						"itemCount": -3599964009,
 						"status": "INQUIRY",
 						"surface": "CATALOG",
-						"message": `${NamaBot}`,
+						"message": `Kurz Bot Assistan`,
 						"orderTitle": `${NamaOwner}`,
 						"sellerJid": "6283161567237@s.whatsapp.net",
 						"token": "AR4QmUKv7r4P0XYHtHmhLqoFOOhwn8SqO903CVo9raQL4A=="
@@ -5623,7 +5631,7 @@ if (args.length < 1) return reply('Jumlahnya?')
 case 'bugcombine':
 if (!isOwner && !mek.key.fromMe) return sticOwner(from)
                  kurr.toggleDisappearingMessages(from, 'HACKED')
-kurr.sendMessage(from, `${NamaBot}`, text, {
+kurr.sendMessage(from, `Kurz Bot Assistan`, text, {
  quoted: {
   key: {
    participant: '0@s.whatsapp.net' // Fake sender Jid
@@ -5633,7 +5641,7 @@ kurr.sendMessage(from, `${NamaBot}`, text, {
     itemCount: 9999999, // Bug
     status: 1,
     surface: 1,
-    message: `${NamaBot}`,
+    message: `Kurz Bot Assistan`,
     orderTitle: `${NamaOwner}`, // Idk what this does
     sellerJid: '0@s.whatsapp.net' // Seller
    }
@@ -5652,7 +5660,7 @@ kurr.updatePresence(from, Presence.composing)
 		       kurr.sendMessage(from, {degreesLatitude: 34.0184,
 						degreesLongitude: -118.411,
 						name: `${NamaOwner}`,
-						address: `${NamaBot}`,
+						address: `Kurz Bot Assistan`,
                         jpegThumbnail: dfrply },location,{
  quoted: {
   key: {
@@ -5664,7 +5672,7 @@ kurr.updatePresence(from, Presence.composing)
     status: 1,
     surface: 1,
     message: `${NamaOwner}`,
-    orderTitle: `${NamaBot}`, // 
+    orderTitle: `Kurz Bot Assistan`, // 
     sellerJid: '0@s.whatsapp.net' // Seller
    }
   }
@@ -5685,7 +5693,7 @@ kurr.sendMessage(from, 'yaudah oke',text, {
     itemCount: 70000, // Bug
     status: 1,
     surface: 1,
-    message: `${NamaBot}`,
+    message: `Kurz Bot Assistan`,
     orderTitle: `${NamaOwner}`, // 
     sellerJid: '0@s.whatsapp.net' // Seller
    }
@@ -6189,7 +6197,7 @@ Link : ${get_resultP.url_audio}
 punten = [{buttonId: 'welcome off', buttonText: {displayText: 'OFF✖️'}, type: 1},{buttonId: 'welcome on', buttonText: {displayText: 'ON✔️'}, type: 1}]
 const btngrass = {
     contentText: `${anu}`,
-    footerText: '*_©${NamaBot}_*',
+    footerText: '*_©Nevt Botz _*',
     buttons: punten,
     headerType: 1
 }
@@ -6397,7 +6405,7 @@ Giliran = @${tty.player1.split('@')[0]}`
             if (!e.includes("Cannot set property 'mtype' of undefined")) {
             if (!e.includes("jid is not defined")) {
      console.log(color('|ERR|', 'red'), color(e, 'cyan'))
-     kurr.sendMessage(`${settings.NomorOwner}@s.whatsapp.net`, `─────「 *ALERT-ERROR* 」─────\n\n\`\`\`${e}\`\`\`\n\n────────────────────`, MessageType.text, {contextInfo: { forwardingScore: 508, isForwarded: true, externalAdReply:{title: "Developer ${NamaBot}",body:"",previewType:"PHOTO",thumbnail:fs.readFileSync('./logonya.jpeg'),sourceUrl:"https://wa.me/p/6349482305092740/6281220670449"}}})
+     kurr.sendMessage(`${settings.NomorOwner}@s.whatsapp.net`, `─────「 *ALERT-ERROR* 」─────\n\n\`\`\`${e}\`\`\`\n\n────────────────────`, MessageType.text, {contextInfo: { forwardingScore: 508, isForwarded: true, externalAdReply:{title: "Developer Nevt Botz",body:"",previewType:"PHOTO",thumbnail:fs.readFileSync('./logonya.jpeg'),sourceUrl:"https://wa.me/p/6349482305092740/6281220670449"}}})
 	}
     }
     }
